@@ -11,9 +11,13 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as EquipmentSourcingRouteImport } from './routes/equipment-sourcing'
 import { Route as IndustriesRouteImport } from './routes/industries'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as TechnicalSalesRouteImport } from './routes/technical-sales'
+import { Route as BlogIndexRouteImport } from './routes/blog.index'
+import { Route as BlogSlugRouteImport } from './routes/blog.$slug'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,6 +27,16 @@ const IndexRoute = IndexRouteImport.update({
 const AboutRoute = AboutRouteImport.update({
   id: '/about',
   path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const EquipmentSourcingRoute = EquipmentSourcingRouteImport.update({
+  id: '/equipment-sourcing',
+  path: '/equipment-sourcing',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndustriesRoute = IndustriesRouteImport.update({
@@ -40,49 +54,97 @@ const TechnicalSalesRoute = TechnicalSalesRouteImport.update({
   path: '/technical-sales',
   getParentRoute: () => rootRouteImport,
 } as any)
+const BlogIndexRoute = BlogIndexRouteImport.update({
+  id: '/blog/',
+  path: '/blog/',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BlogSlugRoute = BlogSlugRouteImport.update({
+  id: '/blog/$slug',
+  path: '/blog/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/equipment-sourcing': typeof EquipmentSourcingRoute
   '/industries': typeof IndustriesRoute
   '/services': typeof ServicesRoute
   '/technical-sales': typeof TechnicalSalesRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/equipment-sourcing': typeof EquipmentSourcingRoute
   '/industries': typeof IndustriesRoute
   '/services': typeof ServicesRoute
   '/technical-sales': typeof TechnicalSalesRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog': typeof BlogIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/equipment-sourcing': typeof EquipmentSourcingRoute
   '/industries': typeof IndustriesRoute
   '/services': typeof ServicesRoute
   '/technical-sales': typeof TechnicalSalesRoute
+  '/blog/$slug': typeof BlogSlugRoute
+  '/blog/': typeof BlogIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/industries' | '/services' | '/technical-sales'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/equipment-sourcing'
+    | '/industries'
+    | '/services'
+    | '/technical-sales'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/industries' | '/services' | '/technical-sales'
+  to:
+    | '/'
+    | '/about'
+    | '/contact'
+    | '/equipment-sourcing'
+    | '/industries'
+    | '/services'
+    | '/technical-sales'
+    | '/blog/$slug'
+    | '/blog'
   id:
     | '__root__'
     | '/'
     | '/about'
+    | '/contact'
+    | '/equipment-sourcing'
     | '/industries'
     | '/services'
     | '/technical-sales'
+    | '/blog/$slug'
+    | '/blog/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  EquipmentSourcingRoute: typeof EquipmentSourcingRoute
   IndustriesRoute: typeof IndustriesRoute
   ServicesRoute: typeof ServicesRoute
   TechnicalSalesRoute: typeof TechnicalSalesRoute
+  BlogSlugRoute: typeof BlogSlugRoute
+  BlogIndexRoute: typeof BlogIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +161,20 @@ declare module '@tanstack/react-router' {
       path: '/about'
       fullPath: '/about'
       preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/equipment-sourcing': {
+      id: '/equipment-sourcing'
+      path: '/equipment-sourcing'
+      fullPath: '/equipment-sourcing'
+      preLoaderRoute: typeof EquipmentSourcingRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/industries': {
@@ -122,15 +198,33 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof TechnicalSalesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/blog/': {
+      id: '/blog/'
+      path: '/blog'
+      fullPath: '/blog/'
+      preLoaderRoute: typeof BlogIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/blog/$slug': {
+      id: '/blog/$slug'
+      path: '/blog/$slug'
+      fullPath: '/blog/$slug'
+      preLoaderRoute: typeof BlogSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  EquipmentSourcingRoute: EquipmentSourcingRoute,
   IndustriesRoute: IndustriesRoute,
   ServicesRoute: ServicesRoute,
   TechnicalSalesRoute: TechnicalSalesRoute,
+  BlogSlugRoute: BlogSlugRoute,
+  BlogIndexRoute: BlogIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
