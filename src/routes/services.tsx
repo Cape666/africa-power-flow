@@ -4,7 +4,7 @@ import { CheckList, CtaBanner, Section, SectionHeading, PageHero } from "@/compo
 
 const title = "Engineering Services — Electrical, Mechanical & Industrial Support";
 const description =
-  "Electrical services for motors, generators, alternators and transformers; mechanical services for pumps, gearboxes, bearings and seals; plus sourcing, spares and maintenance support.";
+  "Electrical services for motors, generators, alternators and panels; mechanical services for pumps, gearboxes, bearings and seals; plus sourcing, spares and maintenance support.";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -27,7 +27,7 @@ const groups = [
       "Motors",
       "Generators",
       "Alternators",
-      "Transformers",
+      
       "Electrical testing",
       "Maintenance",
     ],

@@ -26,7 +26,7 @@ const areas = [
   {
     icon: Zap,
     title: "Electrical Engineering",
-    text: "Motors, generators, alternators, transformers, panels, testing and maintenance.",
+    text: "Motors, generators, alternators, panels, testing and maintenance.",
     img: electricalImg,
   },
   {
