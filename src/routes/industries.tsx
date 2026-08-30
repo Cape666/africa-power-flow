@@ -24,7 +24,7 @@ const industries = [
   ["Agriculture", "Irrigation pumps, motors, generators and mechanical drive components."],
   ["Energy", "Generators, alternators, transformers and electrical testing support."],
   ["Food & Beverage", "Hygienic pumps, gearboxes, bearings and maintenance components."],
-  ["Marine", "Pumps, shafts, couplings, bearings and electrical machine support."],
+  ["Marine", "Alternators, pumps, shafts, couplings, bearings and electrical machine support."],
   ["Industrial Infrastructure", "Utilities, workshops and facilities requiring reliable equipment."],
 ];
 
