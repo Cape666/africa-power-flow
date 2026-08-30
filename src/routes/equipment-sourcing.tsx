@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero, Section, SectionHeading } from "@/components/site/Bits";
-import { Field, Select, SubmitButton, SuccessNote, TextArea, TextInput } from "@/components/site/FormBits";
+import { Field, SubmitButton, SuccessNote, TextArea, TextInput } from "@/components/site/FormBits";
 import sourcingImg from "@/assets/sourcing.jpg";
 
 const title = "Industrial Equipment & Spare Parts Sourcing";
