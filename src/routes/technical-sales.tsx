@@ -87,6 +87,29 @@ function TechnicalSales() {
           </div>
         </div>
       </Section>
+
+      <Section>
+        <SectionHeading
+          eyebrow="Why Partner With Us?"
+          title="What manufacturers gain from working with us"
+          intro="Partnering with us gives your products an experienced technical presence in African industrial markets — without the cost of building one."
+        />
+        <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            ["Established customer access", "Direct relationships with maintenance and procurement teams."],
+            ["Technical credibility", "Enquiries handled by engineers who understand your products."],
+            ["Low-risk market entry", "Test African demand without setting up local operations."],
+            ["Qualified enquiries", "Leads carry real specifications, quantities and timelines."],
+            ["Market feedback", "Honest reporting on pricing, competition and product fit."],
+            ["Long-term commitment", "We build territories and distributor networks, not one-off deals."],
+          ].map(([heading, text]) => (
+            <div key={heading} className="bg-surface p-6">
+              <h3 className="text-sm font-bold text-primary">{heading}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
     </>
   );
 }
