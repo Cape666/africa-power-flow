@@ -37,7 +37,7 @@ const areas = [
   },
   {
     icon: PackageSearch,
-    title: "Industrial Support",
+    title: "Equipment & Sourcing",
     text: "Helping customers source electrical and mechanical equipment and industrial spare parts from reliable suppliers.",
     img: sourcingImg,
   },
@@ -80,8 +80,8 @@ function Home() {
             Connecting Industry With the Right Engineering Solutions
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
-            Nexbridge helps industrial customers source electrical, mechanical and industrial
-            products and services through qualified suppliers and service providers.
+            Nexbridge helps industrial customers source the right electrical, mechanical and
+            industrial products and services through qualified suppliers and service providers.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -104,7 +104,7 @@ function Home() {
         <SectionHeading
           eyebrow="What We Do"
           title="Have an industrial requirement? Come to us directly."
-          intro="Tell us what you need and Nexbridge will help source and coordinate the right solution. We manage your requirement from enquiry to delivery, working behind the scenes with qualified suppliers and service providers."
+          intro="We help industrial customers find and source the right products, services and technical solutions through our network of qualified suppliers and service providers."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {areas.map((area) => (
@@ -160,7 +160,7 @@ function Home() {
             <SectionHeading
               eyebrow="For Suppliers, Service Providers & Manufacturers"
               title="A Channel to Industrial Customers"
-              intro="Are you an engineering service provider, supplier or manufacturer? Partner with Nexbridge to reach industrial customers and develop new business opportunities."
+              intro="Nexbridge helps engineering manufacturers, OEMs and service providers reach industrial customers and develop new business opportunities across African markets."
             />
             <Link
               to="/technical-sales"
@@ -202,7 +202,7 @@ function Home() {
         </div>
       </Section>
 
-      <CtaBanner />
+      <CtaBanner text="Tell us what you need. Nexbridge will help identify and coordinate the right product, service or technical solution through our qualified supplier and service-provider network." />
     </>
   );
 }
