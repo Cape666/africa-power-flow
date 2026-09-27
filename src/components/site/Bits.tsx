@@ -63,7 +63,7 @@ export function SectionHeading({
 
 export function CtaBanner({
   title = "Tell Us What You Need",
-  text = "Send us your requirement, specification or part number. Our team will review it and respond with a technical and commercial proposal.",
+  text = "Tell us what you need. We will help identify the right product, service or technical solution through our network of qualified suppliers and service providers.",
   label = "Request a Quote",
 }: {
   title?: string;
