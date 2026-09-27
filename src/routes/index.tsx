@@ -179,6 +179,29 @@ function Home() {
         </div>
       </Section>
 
+      <Section muted>
+        <SectionHeading
+          eyebrow="Why Work With Us?"
+          title="A practical engineering partner, not just a supplier"
+          intro="We combine engineering knowledge with an established supplier network, so enquiries move quickly and equipment arrives fit for purpose."
+        />
+        <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
+          {[
+            ["Technical expertise", "Electrical and mechanical engineers review every enquiry before we quote."],
+            ["Reliable sourcing", "Established relationships with reputable manufacturers and suppliers."],
+            ["Fast response", "Enquiries acknowledged quickly, with clear lead times up front."],
+            ["One point of contact", "From enquiry to delivery and after-sales follow-up."],
+            ["Honest advice", "If a part is unsuitable or unavailable, we say so and suggest alternatives."],
+            ["Africa-wide experience", "We understand logistics and delivery realities across African markets."],
+          ].map(([heading, text]) => (
+            <div key={heading} className="bg-background p-6">
+              <h3 className="text-sm font-bold text-primary">{heading}</h3>
+              <p className="mt-2 text-sm text-muted-foreground">{text}</p>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <CtaBanner />
     </>
   );

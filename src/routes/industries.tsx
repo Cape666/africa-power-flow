@@ -51,7 +51,7 @@ function Industries() {
       <CtaBanner
         title="Working in one of these sectors?"
         text="Tell us about your equipment and maintenance requirements and we will come back with practical options."
-        label="Send an Enquiry"
+        label="Request a Quote"
       />
     </>
   );

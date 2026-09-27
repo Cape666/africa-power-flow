@@ -1,12 +1,24 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { PageHero, Section, SectionHeading } from "@/components/site/Bits";
-import { Field, SubmitButton, SuccessNote, TextArea, TextInput } from "@/components/site/FormBits";
+import { Field, Select, SubmitButton, SuccessNote, TextArea, TextInput } from "@/components/site/FormBits";
 import sourcingImg from "@/assets/sourcing.jpg";
 
 const title = "Industrial Equipment & Spare Parts Sourcing";
 const description =
   "Request electrical and mechanical equipment, components and industrial spare parts. Send your specification, drawing or part number and we will source it from reliable suppliers.";
+
+const industries = [
+  "Mining",
+  "Manufacturing",
+  "Water & Wastewater",
+  "Agriculture",
+  "Energy",
+  "Food & Beverage",
+  "Marine",
+  "Industrial Infrastructure",
+  "Other",
+];
 
 export const Route = createFileRoute("/equipment-sourcing")({
   head: () => ({
@@ -105,9 +117,30 @@ function EquipmentSourcing() {
                   <Field label="Quantity">
                     <TextInput name="quantity" placeholder="e.g. 2 units" />
                   </Field>
+                  <Field label="Delivery location">
+                    <TextInput name="deliveryLocation" required placeholder="e.g. Johannesburg, South Africa" />
+                  </Field>
+                  <Field label="Required date">
+                    <TextInput type="date" name="requiredDate" />
+                  </Field>
                 </div>
+                <Field label="Industry">
+                  <Select name="industry" required defaultValue="">
+                    <option value="" disabled>
+                      Select your industry
+                    </option>
+                    {industries.map((industry) => (
+                      <option key={industry} value={industry}>
+                        {industry}
+                      </option>
+                    ))}
+                  </Select>
+                </Field>
                 <Field label="Equipment required">
                   <TextInput name="equipment" required placeholder="e.g. 75 kW electric motor" />
+                </Field>
+                <Field label="Preferred manufacturer / brand">
+                  <TextInput name="preferredBrand" placeholder="e.g. ABB, WEG, Siemens — or leave blank for options" />
                 </Field>
                 <Field label="Specification / details">
                   <TextArea
