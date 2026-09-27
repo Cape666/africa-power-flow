@@ -6,9 +6,9 @@ import mechanicalImg from "@/assets/mechanical.jpg";
 import sourcingImg from "@/assets/sourcing.jpg";
 import { CtaBanner, Section, SectionHeading } from "@/components/site/Bits";
 
-const title = "Industrial Electrical & Mechanical Solutions Across Africa";
+const title = "Connecting Industry With the Right Engineering Solutions";
 const description =
-  "Engineering solutions, industrial equipment sourcing and technical sales for African industry — motors, pumps, generators, gearboxes, spare parts and maintenance.";
+  "Nexbridge helps industrial customers source electrical, mechanical and industrial products and services through qualified suppliers and service providers.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,18 +26,18 @@ const areas = [
   {
     icon: Zap,
     title: "Electrical Engineering",
-    text: "Motors, generators, alternators, panels, testing and maintenance.",
+    text: "Motors, generators, alternators, panels, plus testing and maintenance through qualified service providers.",
     img: electricalImg,
   },
   {
     icon: Cog,
     title: "Mechanical Engineering",
-    text: "Pumps, gearboxes, bearings, mechanical seals, couplings, machining, alignment and maintenance.",
+    text: "Pumps, gearboxes, bearings, mechanical seals and couplings, plus machining, alignment and maintenance through qualified partners.",
     img: mechanicalImg,
   },
   {
     icon: PackageSearch,
-    title: "Equipment & Sourcing",
+    title: "Industrial Support",
     text: "Helping customers source electrical and mechanical equipment and industrial spare parts from reliable suppliers.",
     img: sourcingImg,
   },
@@ -77,11 +77,11 @@ function Home() {
         <div className="container-page relative py-24 md:py-32">
           <p className="eyebrow">Electrical • Mechanical • Industrial Supply</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">
-            Industrial Electrical &amp; Mechanical Solutions Across Africa
+            Connecting Industry With the Right Engineering Solutions
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
-            Engineering solutions, industrial equipment sourcing and technical sales for African
-            industry.
+            Nexbridge helps industrial customers source electrical, mechanical and industrial
+            products and services through qualified suppliers and service providers.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -103,8 +103,8 @@ function Home() {
       <Section>
         <SectionHeading
           eyebrow="What We Do"
-          title="Three core areas of support for industrial operations"
-          intro="From rotating equipment and electrical systems to hard-to-find spare parts, we support maintenance and procurement teams with practical engineering solutions."
+          title="Have an industrial requirement? Come to us directly."
+          intro="Tell us what you need and Nexbridge will help source and coordinate the right solution. We manage your requirement from enquiry to delivery, working behind the scenes with qualified suppliers and service providers."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {areas.map((area) => (
@@ -158,9 +158,9 @@ function Home() {
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
-              eyebrow="For Manufacturers & OEMs"
-              title="Technical Sales & Manufacturer Representation"
-              intro="We work with engineering manufacturers and OEMs to develop customers and business opportunities across African markets — representing their products with technical credibility."
+              eyebrow="For Suppliers, Service Providers & Manufacturers"
+              title="A Channel to Industrial Customers"
+              intro="Are you an engineering service provider, supplier or manufacturer? Partner with Nexbridge to reach industrial customers and develop new business opportunities."
             />
             <Link
               to="/technical-sales"
@@ -182,15 +182,15 @@ function Home() {
       <Section muted>
         <SectionHeading
           eyebrow="Why Work With Us?"
-          title="A practical engineering partner, not just a supplier"
-          intro="We combine engineering knowledge with an established supplier network, so enquiries move quickly and equipment arrives fit for purpose."
+          title="One point of contact for your industrial requirements"
+          intro="We combine technical understanding with a network of qualified suppliers and service providers — sourcing, quoting and coordinating the right solution for you."
         />
         <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {[
-            ["Technical expertise", "Electrical and mechanical engineers review every enquiry before we quote."],
-            ["Reliable sourcing", "Established relationships with reputable manufacturers and suppliers."],
+            ["Technical expertise", "Every enquiry is technically reviewed before we source and quote."],
+            ["Reliable sourcing", "A network of qualified suppliers, service providers and manufacturers."],
             ["Fast response", "Enquiries acknowledged quickly, with clear lead times up front."],
-            ["One point of contact", "From enquiry to delivery and after-sales follow-up."],
+            ["One point of contact", "We quote, coordinate the solution and manage the relationship — we do not simply refer you elsewhere."],
             ["Honest advice", "If a part is unsuitable or unavailable, we say so and suggest alternatives."],
             ["Africa-wide experience", "We understand logistics and delivery realities across African markets."],
           ].map(([heading, text]) => (
