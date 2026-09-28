@@ -1,10 +1,10 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { Zap, Cog, Wrench } from "lucide-react";
 import { CheckList, CtaBanner, Section, SectionHeading, PageHero } from "@/components/site/Bits";
 
-const title = "Engineering Services — Electrical, Mechanical & Industrial Support";
+const title = "Services — Electrical, Mechanical & Industrial Support";
 const description =
-  "Electrical services for motors, generators, alternators and panels; mechanical services for pumps, gearboxes, bearings and seals; plus sourcing, spares and maintenance support.";
+  "Electrical, mechanical and industrial support solutions sourced and coordinated by Nexbridge through qualified suppliers and service providers.";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -22,43 +22,50 @@ const groups = [
   {
     icon: Zap,
     title: "Electrical",
-    intro: "Electrical rotating machines, power equipment and testing.",
+    intro: "Electrical products and technical solutions sourced through qualified suppliers and service providers.",
     items: [
-      "Motors",
+      "Electric Motors",
       "Generators",
       "Alternators",
-      
-      "Electrical testing",
-      "Maintenance",
+      "Electrical Panels",
+      "Electrical Testing",
+      "Electrical Maintenance",
+      "Related Electrical Equipment",
     ],
+    message: "Tell us your electrical requirement and we will help identify and source a suitable solution.",
   },
   {
     icon: Cog,
     title: "Mechanical",
-    intro: "Rotating equipment, drive components and precision work.",
+    intro: "Mechanical products and technical solutions sourced through qualified suppliers and service providers.",
     items: [
-      "Pumps",
-      "Gearboxes",
+      "Industrial Pumps",
       "Bearings",
-      "Mechanical seals",
+      "Mechanical Seals",
       "Couplings",
+      "Gearboxes",
       "Shafts",
-      "Machining",
       "Alignment",
-      "Maintenance",
+      "Mechanical Maintenance",
+      "Related Mechanical Equipment",
     ],
+    message: "Tell us your mechanical requirement and we will help identify and source a suitable solution.",
   },
   {
     icon: Wrench,
     title: "Industrial Support",
-    intro: "Practical support for procurement and maintenance teams.",
+    intro: "Industrial equipment, spare parts and technical support sourced and coordinated through our qualified network.",
     items: [
-      "Equipment sourcing",
-      "Spare parts",
-      "Technical assistance",
-      "Repair coordination",
-      "Maintenance solutions",
+      "Industrial Equipment",
+      "Spare Parts",
+      "Maintenance Support",
+      "Repair Services",
+      "Technical Support",
+      "Equipment Sourcing",
+      "Other Industrial Requirements",
     ],
+    message:
+      "Have an industrial requirement that does not fit into a specific category? Tell us what you need and we will help find the right solution.",
   },
 ];
 
@@ -67,18 +74,25 @@ function Services() {
     <>
       <PageHero
         eyebrow="Services"
-        title="Electrical, mechanical and industrial support services"
-        intro="A focused service offering built around the equipment that keeps industrial plants running."
+        title="Electrical, Mechanical and Industrial Support"
+        intro="Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers."
       />
 
       <Section>
         <div className="grid gap-6 lg:grid-cols-3">
           {groups.map((group) => (
-            <article key={group.title} className="border border-border bg-card p-7 shadow-card">
+            <article key={group.title} className="flex flex-col items-start border border-border bg-card p-7 shadow-card">
               <group.icon className="h-7 w-7 text-accent" strokeWidth={1.75} />
               <h2 className="mt-5 text-xl font-bold">{group.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{group.intro}</p>
               <CheckList items={group.items} />
+              <p className="mt-6 text-sm leading-relaxed text-foreground">{group.message}</p>
+              <Link
+                to="/contact"
+                className="mt-5 inline-block bg-accent px-5 py-2.5 font-display text-xs font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+              >
+                Request a Quote
+              </Link>
             </article>
           ))}
         </div>
@@ -87,15 +101,15 @@ function Services() {
       <Section muted>
         <SectionHeading
           eyebrow="How We Work"
-          title="A straightforward technical process"
-          intro="No complicated portals — you send the requirement, we handle the engineering and commercial detail."
+          title="From your requirement to a coordinated solution"
+          intro="You tell us what you need. We understand the requirement, source the right product or service through qualified suppliers and service providers, and coordinate the commercial solution with you."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-4">
           {[
-            ["01", "Enquiry", "You share the requirement, specification, drawing or part number."],
-            ["02", "Technical review", "We confirm the specification and identify suitable options."],
-            ["03", "Proposal", "You receive pricing, lead time and technical details."],
-            ["04", "Delivery & support", "We coordinate supply, repair or maintenance work."],
+            ["01", "Understand", "We review your requirement, specification, drawing or part number to understand exactly what you need."],
+            ["02", "Identify & source", "We identify suitable products or services and work with qualified suppliers and service providers."],
+            ["03", "Quote", "We obtain suitable solutions and pricing and provide you with a commercial quotation."],
+            ["04", "Coordinate", "We coordinate the solution with you and the supplier or service provider through to completion."],
           ].map(([num, heading, text]) => (
             <div key={num} className="border-t-2 border-accent bg-background p-6">
               <span className="font-display text-2xl font-bold text-accent">{num}</span>

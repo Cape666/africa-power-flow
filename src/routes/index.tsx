@@ -25,20 +25,20 @@ export const Route = createFileRoute("/")({
 const areas = [
   {
     icon: Zap,
-    title: "Electrical Engineering",
-    text: "Motors, generators, alternators, panels, plus testing and maintenance through qualified service providers.",
+    title: "Electrical",
+    text: "Electrical products and technical solutions sourced through qualified suppliers and service providers — motors, generators, alternators, panels, testing and maintenance.",
     img: electricalImg,
   },
   {
     icon: Cog,
-    title: "Mechanical Engineering",
-    text: "Pumps, gearboxes, bearings, mechanical seals and couplings, plus machining, alignment and maintenance through qualified partners.",
+    title: "Mechanical",
+    text: "Mechanical products and technical solutions sourced through qualified suppliers and service providers — pumps, bearings, seals, couplings, gearboxes, alignment and maintenance.",
     img: mechanicalImg,
   },
   {
     icon: PackageSearch,
-    title: "Equipment & Sourcing",
-    text: "Helping customers source electrical and mechanical equipment and industrial spare parts from reliable suppliers.",
+    title: "Industrial Support",
+    text: "Industrial equipment, spare parts and technical support sourced and coordinated through our qualified network.",
     img: sourcingImg,
   },
 ];
