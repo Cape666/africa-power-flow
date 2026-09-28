@@ -3,7 +3,7 @@ import { CtaBanner, PageHero, Section } from "@/components/site/Bits";
 
 const title = "Industries We Serve — Mining, Manufacturing, Water, Energy & More";
 const description =
-  "We support mining, manufacturing, water and wastewater, agriculture, energy, food and beverage, marine and industrial infrastructure operations across Africa.";
+  "Nexbridge sources products, services and technical solutions for mining, manufacturing, water and wastewater, agriculture, energy and power, food and beverage, marine and industrial infrastructure across Africa.";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
@@ -18,14 +18,14 @@ export const Route = createFileRoute("/industries")({
 });
 
 const industries = [
-  ["Mining", "Motors, pumps, gearboxes and drive components for processing plants and dewatering."],
-  ["Manufacturing", "Rotating equipment, electrical systems and spare parts for production lines."],
-  ["Water & Wastewater", "Pump sets, mechanical seals, couplings and electrical panels."],
-  ["Agriculture", "Irrigation pumps, motors, generators and mechanical drive components."],
-  ["Energy", "Generators, alternators, transformers and electrical testing support."],
-  ["Food & Beverage", "Hygienic pumps, gearboxes, bearings and maintenance components."],
-  ["Marine", "Alternators, pumps, shafts, couplings, bearings and electrical machine support."],
-  ["Industrial Infrastructure", "Utilities, workshops and facilities requiring reliable equipment."],
+  ["Mining", "Electrical and mechanical equipment, pumps, motors, bearings, spare parts and related industrial solutions."],
+  ["Manufacturing", "Motors, pumps, rotating equipment, electrical equipment, mechanical components, spare parts and maintenance solutions."],
+  ["Water & Wastewater", "Pumps, motors, mechanical components, electrical equipment, spare parts and maintenance support."],
+  ["Agriculture", "Irrigation pumps, motors, mechanical equipment, spare parts and related industrial solutions."],
+  ["Energy & Power", "Alternators, motors, rotating equipment and related technical solutions."],
+  ["Food & Beverage", "Pumps, motors, gearboxes, mechanical components, spare parts and maintenance solutions."],
+  ["Marine", "Motors, alternators, pumps, bearings, couplings and other electrical and mechanical equipment."],
+  ["Industrial Infrastructure", "Electrical equipment, mechanical equipment, industrial spare parts, maintenance support and technical solutions."],
 ];
 
 function Industries() {
@@ -33,8 +33,8 @@ function Industries() {
     <>
       <PageHero
         eyebrow="Industries"
-        title="Engineering support for African industry"
-        intro="Every sector has different equipment, duty cycles and procurement realities. We tailor our technical and sourcing support accordingly."
+        title="Industries we serve"
+        intro="If your company operates in one of these industries and has an electrical, mechanical or industrial requirement, you can approach Nexbridge. We identify suitable solutions and source them by working with qualified suppliers and service providers."
       />
 
       <Section>
@@ -49,8 +49,8 @@ function Industries() {
       </Section>
 
       <CtaBanner
-        title="Working in one of these sectors?"
-        text="Tell us about your equipment and maintenance requirements and we will come back with practical options."
+        title="Have an Industrial Requirement?"
+        text="Tell us what you need and Nexbridge will help identify and source the right product, service or technical solution."
         label="Request a Quote"
       />
     </>
