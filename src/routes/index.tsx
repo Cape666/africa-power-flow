@@ -48,7 +48,7 @@ const industries = [
   "Manufacturing",
   "Water & Wastewater",
   "Agriculture",
-  "Energy",
+  "Energy & Power",
   "Food & Beverage",
   "Marine",
   "Industrial Infrastructure",
