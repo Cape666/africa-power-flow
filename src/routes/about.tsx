@@ -40,7 +40,7 @@ function About() {
               </p>
               <p>
                 We focus on the equipment that industrial plants depend on every day — motors,
-                generators, alternators, transformers, pumps, gearboxes, bearings, seals and
+                alternators, transformers, pumps, gearboxes, bearings, seals and
                 couplings — and on getting the right specification to the right site.
               </p>
               <p>

@@ -26,7 +26,7 @@ const areas = [
   {
     icon: Zap,
     title: "Electrical",
-    text: "Electrical products and technical solutions sourced through qualified suppliers and service providers — motors, generators, alternators, panels, testing and maintenance.",
+    text: "Electrical products and technical solutions sourced through qualified suppliers and service providers — motors, alternators, testing and maintenance.",
     img: electricalImg,
   },
   {

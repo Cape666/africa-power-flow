@@ -25,9 +25,7 @@ const groups = [
     intro: "Electrical products and technical solutions sourced through qualified suppliers and service providers.",
     items: [
       "Electric Motors",
-      "Generators",
       "Alternators",
-      "Electrical Panels",
       "Electrical Testing",
       "Electrical Maintenance",
       "Related Electrical Equipment",

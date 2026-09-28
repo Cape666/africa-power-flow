@@ -59,8 +59,8 @@ function TechnicalSales() {
             <SectionHeading eyebrow="Product Categories" title="Where we are most effective" />
             <CheckList
               items={[
-                "Electric motors, generators and alternators",
-                "Transformers, panels and electrical equipment",
+                "Electric motors and alternators",
+                "Transformers and electrical equipment",
                 "Pumps and pump components",
                 "Gearboxes, couplings and drive components",
                 "Bearings, mechanical seals and shafts",

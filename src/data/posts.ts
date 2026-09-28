@@ -79,7 +79,7 @@ export const posts: Post[] = [
       "Insulation resistance, winding tests and thermography catch most electrical failures long before they stop production.",
     body: [
       "Electrical failures often announce themselves well in advance, provided someone is testing for the signs.",
-      "Insulation resistance testing on motors, generators and transformers tracks the gradual degradation of winding insulation caused by moisture, heat and contamination. Trending results over time is far more informative than a single reading.",
+      "Insulation resistance testing on motors, alternators and transformers tracks the gradual degradation of winding insulation caused by moisture, heat and contamination. Trending results over time is far more informative than a single reading.",
       "Winding resistance and polarisation index tests add detail, identifying turn-to-turn faults and moisture ingress before a machine fails under load.",
       "Thermographic inspection of panels, terminations and busbars is quick, non-invasive and consistently finds loose connections — one of the most common and most preventable causes of electrical downtime.",
     ],
