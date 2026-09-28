@@ -3,7 +3,7 @@ import { CtaBanner, PageHero, Section } from "@/components/site/Bits";
 
 const title = "Industries We Serve — Mining, Manufacturing, Water, Energy & More";
 const description =
-  "We support mining, manufacturing, water and wastewater, agriculture, energy, food and beverage, marine and industrial infrastructure operations across Africa.";
+  "Nexbridge sources products, services and technical solutions for mining, manufacturing, water and wastewater, agriculture, energy and power, food and beverage, marine and industrial infrastructure across Africa.";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
