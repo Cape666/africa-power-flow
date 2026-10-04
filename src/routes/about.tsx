@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { CtaBanner, PageHero, Section, SectionHeading } from "@/components/site/Bits";
 import workshopImg from "@/assets/mechanical.jpg";
 
-const title = "About Us — Industrial Engineering & Technical Sales";
+const title = "About Us — Technical-Commercial Sourcing for Industry";
 const description =
-  "Nexbridge Engineering provides electrical and mechanical engineering solutions, equipment sourcing and technical sales, connecting reliable manufacturers with African industry.";
+  "Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers across Africa.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -23,29 +23,30 @@ function About() {
     <>
       <PageHero
         eyebrow="About"
-        title="An engineering and technical sales business focused on African industry"
-        intro="We combine engineering knowledge with commercial capability to support industrial customers and the manufacturers who supply them."
+        title="A technical-commercial bridge for African industry"
+        intro="Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers."
       />
 
       <Section>
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading eyebrow="Who We Are" title="Engineering-led, customer-driven" />
-            <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground">
+            <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-justify">
               <p>
-                We are an electrical and mechanical engineering business serving industrial
-                customers. Our work covers engineering solutions, industrial equipment and
-                spare-parts sourcing, repair and maintenance support, technical sales and
-                manufacturer representation.
+                Nexbridge helps industrial customers find and source the right electrical,
+                mechanical and industrial products, services and technical solutions. We work with
+                qualified suppliers, service providers and technical partners to help customers
+                meet their specific requirements.
               </p>
               <p>
-                We focus on the equipment that industrial plants depend on every day — motors,
-                alternators, transformers, pumps, gearboxes, bearings, seals and
-                couplings — and on getting the right specification to the right site.
+                Our role is to understand the customer's requirement, identify suitable solutions,
+                obtain relevant commercial options and coordinate with the appropriate supplier or
+                service provider. Where appropriate, Nexbridge can provide the customer with a
+                direct commercial quotation and manage the opportunity through to fulfilment.
               </p>
               <p>
-                Our approach is deliberately simple: understand the technical requirement, source
-                or solve it properly, and communicate clearly on price and lead time.
+                Our focus includes electric motors, alternators, pumps, rotating equipment,
+                industrial components, spare parts, maintenance solutions and technical sourcing.
               </p>
             </div>
           </div>
@@ -61,13 +62,22 @@ function About() {
       </Section>
 
       <Section muted>
-        <SectionHeading eyebrow="Our Vision" title="Connecting manufacturers with African industry" />
-        <p className="mt-5 max-w-3xl text-base leading-relaxed text-muted-foreground">
-          Our long-term goal is to build strong technical and commercial relationships across
-          Africa — connecting reliable engineering manufacturers and suppliers with the industrial
-          customers who need them. We aim to be the dependable technical link between global
-          equipment quality and local industrial requirements.
-        </p>
+        <SectionHeading eyebrow="Our Vision" title="Connecting industrial customers with qualified partners" />
+        <div className="mt-5 max-w-3xl space-y-4 text-base leading-relaxed text-muted-foreground sm:text-justify">
+          <p>
+            Our vision is to become a trusted technical-commercial bridge between industrial
+            customers and qualified suppliers and service providers across Africa.
+          </p>
+          <p>
+            We aim to make it easier for industrial customers to find suitable products, services
+            and technical solutions while helping engineering suppliers and manufacturers develop
+            new business opportunities in African markets.
+          </p>
+          <p>
+            By building reliable relationships between customers and technical partners, Nexbridge
+            aims to create practical, commercially sustainable solutions for industry.
+          </p>
+        </div>
         <div className="mt-10 grid gap-px bg-border md:grid-cols-3">
           {[
             ["Technical first", "Specifications, duty conditions and compatibility come before the quote."],
