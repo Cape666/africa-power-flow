@@ -39,8 +39,8 @@ function EquipmentSourcing() {
     <>
       <PageHero
         eyebrow="Equipment & Sourcing"
-        title="Source industrial equipment, components and spare parts"
-        intro="Tell us what you need and we will identify suitable equipment or parts from reliable suppliers and manufacturers."
+        title="Industrial Equipment & Technical Sourcing"
+        intro="Tell us what you need and Nexbridge will help identify, source and coordinate the right product, equipment or technical solution through qualified suppliers and service providers."
       />
 
       <Section>
@@ -48,15 +48,15 @@ function EquipmentSourcing() {
           <div>
             <SectionHeading
               eyebrow="How It Works"
-              title="From part number to delivered equipment"
-              intro="Customers can request electrical and mechanical equipment, components and spare parts — whether it is a complete pump set, a replacement motor, or a single bearing or mechanical seal."
+              title="A simple sourcing process"
+              intro="Nexbridge manages the sourcing process and works with suitable suppliers and service providers to develop the right commercial solution for the customer."
             />
             <div className="mt-8 grid gap-px bg-border">
               {[
-                ["Send your requirement", "Specification, drawing, nameplate photo or part number."],
-                ["We identify options", "We check compatibility, availability and lead time."],
-                ["You receive a quotation", "Clear pricing, delivery terms and technical details."],
-                ["Supply and follow-up", "We coordinate supply and remain available for support."],
+                ["Tell Us What You Need", "Send us the equipment, product or service requirement, specification or enquiry."],
+                ["We Identify Suitable Options", "We work with qualified suppliers and service providers to identify suitable solutions."],
+                ["We Provide a Commercial Solution", "We obtain relevant pricing and information and can provide the customer with a quotation or commercial proposal."],
+                ["We Coordinate the Requirement", "We help coordinate the solution between the customer and the appropriate supplier or service provider."],
               ].map(([heading, text], i) => (
                 <div key={heading} className="flex gap-4 bg-surface p-5">
                   <span className="font-display text-sm font-bold text-accent">0{i + 1}</span>
@@ -66,6 +66,10 @@ function EquipmentSourcing() {
                   </div>
                 </div>
               ))}
+            </div>
+            <h3 className="mt-10 text-lg font-bold">Examples of requirements</h3>
+            <div className="sm:columns-2">
+              <CheckList items={examples} />
             </div>
             <img
               src={sourcingImg}
