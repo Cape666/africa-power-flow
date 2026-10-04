@@ -1,12 +1,29 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
-import { PageHero, Section, SectionHeading } from "@/components/site/Bits";
+import { CheckList, CtaBanner, PageHero, Section, SectionHeading } from "@/components/site/Bits";
 import { Field, Select, SubmitButton, SuccessNote, TextArea, TextInput } from "@/components/site/FormBits";
 import sourcingImg from "@/assets/sourcing.jpg";
 
-const title = "Industrial Equipment & Spare Parts Sourcing";
+const title = "Industrial Equipment & Technical Sourcing";
 const description =
-  "Request electrical and mechanical equipment, components and industrial spare parts. Send your specification, drawing or part number and we will source it from reliable suppliers.";
+  "Tell us what you need and Nexbridge will help identify, source and coordinate the right product, equipment or technical solution through qualified suppliers and service providers.";
+
+const examples = [
+  "Electric Motors",
+  "Alternators",
+  "Industrial Pumps",
+  "Bearings",
+  "Mechanical Seals",
+  "Couplings",
+  "Gearboxes",
+  "Shafts",
+  "Industrial Spare Parts",
+  "Electrical Equipment",
+  "Mechanical Equipment",
+  "Maintenance Services",
+  "Repair Services",
+  "Other Industrial Requirements",
+];
 
 const industries = [
   "Mining",
