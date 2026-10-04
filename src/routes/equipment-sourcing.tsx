@@ -183,6 +183,12 @@ function EquipmentSourcing() {
           </div>
         </div>
       </Section>
+
+      <CtaBanner
+        title="Have an Equipment or Technical Requirement?"
+        text="Send us your requirement and let us help source the right solution."
+        label="Request a Quote"
+      />
     </>
   );
 }
