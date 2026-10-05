@@ -14,8 +14,8 @@ export function Footer() {
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
-            Electrical and mechanical engineering solutions, industrial equipment sourcing and
-            technical sales for industrial customers across Africa.
+            Electrical, mechanical and industrial equipment sourcing and technical sales for
+            industrial customers across Africa.
           </p>
         </div>
 
