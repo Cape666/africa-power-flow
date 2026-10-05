@@ -1,9 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckList, PageHero, Section, SectionHeading } from "@/components/site/Bits";
 
-const title = "Technical Sales & Manufacturer Representation in Africa";
+const title = "Technical Sales Support for Manufacturers, OEMs & Suppliers";
 const description =
-  "We help engineering manufacturers and OEMs reach African markets through technical sales, market development, lead generation, product representation and distributor development.";
+  "We help manufacturers, OEMs and technical suppliers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets.";
 
 export const Route = createFileRoute("/technical-sales")({
   head: () => ({
@@ -18,21 +18,21 @@ export const Route = createFileRoute("/technical-sales")({
 });
 
 const capabilities = [
-  ["Technical sales", "Engineering-literate selling into maintenance and procurement teams."],
-  ["Market development", "Identifying where your products fit across African industrial sectors."],
-  ["Customer acquisition", "Direct engagement with end users and plant operators."],
-  ["Lead generation", "Qualified enquiries with real technical requirements behind them."],
-  ["Product representation", "Presenting your range accurately and professionally."],
-  ["Distributor development", "Building and supporting local routes to market."],
+  ["Technical Sales", "Supporting the technical-commercial sales process by understanding customer requirements and communicating suitable product solutions."],
+  ["Market Development", "Identifying potential industrial applications, sectors and customer opportunities for suitable products."],
+  ["Customer Acquisition", "Helping identify and engage potential industrial customers with relevant requirements."],
+  ["Lead Generation", "Developing qualified enquiries based on genuine industrial requirements, specifications and project needs."],
+  ["Product Representation", "Presenting suitable products and technical solutions accurately to potential industrial customers."],
+  ["Distributor Development", "Supporting manufacturers and suppliers in exploring suitable local sales and distribution opportunities where appropriate."],
 ];
 
 function TechnicalSales() {
   return (
     <>
       <PageHero
-        eyebrow="For Manufacturers & OEMs"
-        title="Helping Engineering Manufacturers Reach African Markets"
-        intro="We work with manufacturers and OEMs to develop customers and business opportunities across Africa."
+        eyebrow="For Manufacturers, OEMs & Technical Suppliers"
+        title="Helping Engineering Suppliers Reach African Industrial Customers"
+        intro="We help manufacturers, OEMs and technical suppliers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets."
       />
 
       <Section>
@@ -40,7 +40,7 @@ function TechnicalSales() {
           <SectionHeading
             eyebrow="What We Offer"
             title="A technical partner on the ground"
-            intro="Many manufacturers have excellent products but limited visibility of African industrial demand. We bridge that gap with technical selling, direct customer relationships and honest market feedback."
+            intro="Many manufacturers and suppliers have strong products but may not have direct access to industrial customers in African markets. Nexbridge helps bridge this gap by identifying opportunities, understanding customer requirements and supporting the technical-commercial sales process."
           />
           <div className="grid gap-px bg-border sm:grid-cols-2">
             {capabilities.map(([heading, text]) => (
@@ -60,7 +60,7 @@ function TechnicalSales() {
             <CheckList
               items={[
                 "Electric motors and alternators",
-                "Transformers and electrical equipment",
+                "Electrical equipment",
                 "Pumps and pump components",
                 "Gearboxes, couplings and drive components",
                 "Bearings, mechanical seals and shafts",
@@ -73,9 +73,9 @@ function TechnicalSales() {
             <CheckList
               items={[
                 "You share your product range and target sectors",
-                "We assess fit against known industrial demand",
-                "We agree on scope, territory and commercial terms",
-                "We begin technical sales and market development",
+                "We assess potential market and customer fit",
+                "We discuss the appropriate scope and commercial arrangement",
+                "We begin agreed technical sales and market development activities",
               ]}
             />
             <Link
@@ -91,17 +91,17 @@ function TechnicalSales() {
       <Section>
         <SectionHeading
           eyebrow="Why Partner With Us?"
-          title="What manufacturers gain from working with us"
-          intro="Partnering with us gives your products an experienced technical presence in African industrial markets — without the cost of building one."
+          title="What suppliers gain from working with us"
+          intro="Subject to agreed commercial arrangements, Nexbridge supports suppliers in developing opportunities with industrial customers in African markets."
         />
         <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {[
-            ["Established customer access", "Direct relationships with maintenance and procurement teams."],
-            ["Technical credibility", "Enquiries handled by engineers who understand your products."],
-            ["Low-risk market entry", "Test African demand without setting up local operations."],
-            ["Qualified enquiries", "Leads carry real specifications, quantities and timelines."],
-            ["Market feedback", "Honest reporting on pricing, competition and product fit."],
-            ["Long-term commitment", "We build territories and distributor networks, not one-off deals."],
+            ["Market Access", "Support in identifying potential industrial customers and opportunities in African markets."],
+            ["Technical Understanding", "Technical-commercial communication focused on understanding customer requirements and product fit."],
+            ["Market Development", "Support in exploring potential applications, sectors and customer opportunities."],
+            ["Qualified Enquiries", "Focus on enquiries with relevant specifications, quantities, applications and timelines where available."],
+            ["Market Feedback", "Practical feedback on customer requirements, pricing considerations, competition and product fit."],
+            ["Flexible Commercial Approach", "Commercial arrangements can be discussed based on the supplier's objectives, market opportunity and agreed scope."],
           ].map(([heading, text]) => (
             <div key={heading} className="bg-surface p-6">
               <h3 className="text-sm font-bold text-primary">{heading}</h3>
