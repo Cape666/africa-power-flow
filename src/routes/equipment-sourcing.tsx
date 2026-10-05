@@ -66,14 +66,14 @@ function EquipmentSourcing() {
             <SectionHeading
               eyebrow="How It Works"
               title="A simple sourcing process"
-              intro="Nexbridge manages the sourcing process and works with suitable suppliers and service providers to develop the right commercial solution for the customer."
+              intro="Nexbridge coordinates the sourcing process by understanding the customer requirement, identifying suitable options and working with qualified suppliers and service providers to develop the appropriate commercial solution."
             />
             <div className="mt-8 grid gap-px bg-border">
               {[
-                ["Tell Us What You Need", "Send us the equipment, product or service requirement, specification or enquiry."],
-                ["We Identify Suitable Options", "We work with qualified suppliers and service providers to identify suitable solutions."],
-                ["We Provide a Commercial Solution", "We obtain relevant pricing and information and can provide the customer with a quotation or commercial proposal."],
-                ["We Coordinate the Requirement", "We help coordinate the solution between the customer and the appropriate supplier or service provider."],
+                ["Tell Us What You Need", "Send us your equipment, product, service or technical requirement, including any available specification, quantity, application or enquiry details."],
+                ["We Identify Suitable Options", "We work with qualified suppliers and service providers to identify suitable products, services or technical solutions based on your requirement."],
+                ["We Provide a Commercial Solution", "We obtain relevant technical and commercial information and, where appropriate, provide the customer with a quotation or commercial proposal."],
+                ["We Coordinate the Requirement", "We help coordinate the requirement between the customer and the appropriate supplier or service provider through the agreed commercial process."],
               ].map(([heading, text], i) => (
                 <div key={heading} className="flex gap-4 bg-surface p-5">
                   <span className="font-display text-sm font-bold text-accent">0{i + 1}</span>
@@ -99,9 +99,9 @@ function EquipmentSourcing() {
           </div>
 
           <div className="border border-border bg-card p-7 shadow-card">
-            <h2 className="text-xl font-bold">Equipment Enquiry</h2>
+            <h2 className="text-xl font-bold">Equipment & Technical Enquiry</h2>
             <p className="mt-2 text-sm text-muted-foreground">
-              Complete the form below and our team will respond with options and pricing.
+              Complete the form below with your requirement. We will review the information and work with suitable suppliers or service providers to develop an appropriate commercial response.
             </p>
 
             {sent ? (
@@ -157,7 +157,7 @@ function EquipmentSourcing() {
                     ))}
                   </Select>
                 </Field>
-                <Field label="Equipment required">
+                <Field label="Equipment / Service Required">
                   <TextInput name="equipment" required placeholder="e.g. 75 kW electric motor" />
                 </Field>
                 <Field label="Preferred manufacturer / brand">
