@@ -30,7 +30,7 @@ function About() {
       <Section>
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
-            <SectionHeading eyebrow="Who We Are" title="Engineering-led, customer-driven" />
+            <SectionHeading eyebrow="Who We Are" title="Technical expertise, customer-focused" />
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-justify">
               <p>
                 Nexbridge helps industrial customers find and source the right electrical,
@@ -52,7 +52,7 @@ function About() {
           </div>
           <img
             src={workshopImg}
-            alt="Industrial pumps and mechanical components in an engineering workshop"
+            alt="Industrial pumps and mechanical components"
             loading="lazy"
             width={1200}
             height={900}
