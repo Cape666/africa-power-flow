@@ -22,7 +22,7 @@ const groups = [
   {
     icon: Zap,
     title: "Electrical",
-    intro: "Electrical products and technical solutions sourced through qualified suppliers and service providers.",
+    intro: "Electrical products and technical solutions for industrial requirements.",
     items: [
       "Electric Motors",
       "Alternators",
@@ -35,7 +35,7 @@ const groups = [
   {
     icon: Cog,
     title: "Mechanical",
-    intro: "Mechanical products and technical solutions sourced through qualified suppliers and service providers.",
+    intro: "Mechanical products and technical solutions for industrial requirements.",
     items: [
       "Industrial Pumps",
       "Bearings",
@@ -52,7 +52,7 @@ const groups = [
   {
     icon: Wrench,
     title: "Industrial Support",
-    intro: "Industrial equipment, spare parts and technical support sourced and coordinated through our qualified network.",
+    intro: "Industrial equipment, spare parts and technical support for a range of industrial requirements.",
     items: [
       "Industrial Equipment",
       "Spare Parts",
@@ -63,7 +63,7 @@ const groups = [
       "Other Industrial Requirements",
     ],
     message:
-      "Have an industrial requirement that does not fit into a specific category? Tell us what you need and we will help find the right solution.",
+      "Have an industrial requirement that does not fit into a specific category? Tell us what you need and we will help identify the right solution.",
   },
 ];
 
@@ -100,14 +100,14 @@ function Services() {
         <SectionHeading
           eyebrow="How We Work"
           title="From your requirement to a coordinated solution"
-          intro="You tell us what you need. We understand the requirement, source the right product or service through qualified suppliers and service providers, and coordinate the commercial solution with you."
+          intro="You tell us what you need. We understand the requirement, identify suitable options, obtain the relevant commercial information and coordinate the solution with you."
         />
         <div className="mt-10 grid gap-6 md:grid-cols-4">
           {[
             ["01", "Understand", "We review your requirement, specification, drawing or part number to understand exactly what you need."],
-            ["02", "Identify & source", "We identify suitable products or services and work with qualified suppliers and service providers."],
-            ["03", "Quote", "We obtain suitable solutions and pricing and provide you with a commercial quotation."],
-            ["04", "Coordinate", "We coordinate the solution with you and the supplier or service provider through to completion."],
+            ["02", "Identify & Source", "We identify suitable products or services based on your requirement and source the appropriate solution."],
+            ["03", "Quote", "We obtain relevant technical and commercial information and, where appropriate, provide you with a commercial quotation."],
+            ["04", "Coordinate", "We coordinate the agreed solution with you and the appropriate technical or supply partner through to completion."],
           ].map(([num, heading, text]) => (
             <div key={num} className="border-t-2 border-accent bg-background p-6">
               <span className="font-display text-2xl font-bold text-accent">{num}</span>
@@ -118,7 +118,7 @@ function Services() {
         </div>
       </Section>
 
-      <CtaBanner />
+      <CtaBanner text="Tell us what you need. We will help identify, source and coordinate the right product, service or technical solution for your requirement." />
     </>
   );
 }
