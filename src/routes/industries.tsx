@@ -18,14 +18,14 @@ export const Route = createFileRoute("/industries")({
 });
 
 const industries = [
-  ["Mining", "Electrical and mechanical equipment, pumps, motors, bearings, spare parts and related industrial solutions."],
-  ["Manufacturing", "Motors, pumps, rotating equipment, electrical equipment, mechanical components, spare parts and maintenance solutions."],
-  ["Water & Wastewater", "Pumps, motors, mechanical components, electrical equipment, spare parts and maintenance support."],
-  ["Agriculture", "Irrigation pumps, motors, mechanical equipment, spare parts and related industrial solutions."],
-  ["Energy & Power", "Alternators, motors, rotating equipment and related technical solutions."],
-  ["Food & Beverage", "Pumps, motors, gearboxes, mechanical components, spare parts and maintenance solutions."],
+  ["Mining", "Motors, pumps, bearings, rotating equipment, mechanical components, industrial spare parts and other electrical and mechanical requirements."],
+  ["Manufacturing", "Electric motors, pumps, rotating equipment, electrical equipment, mechanical components, industrial spare parts and maintenance-related requirements."],
+  ["Water & Wastewater", "Industrial pumps, motors, mechanical components, electrical equipment, spare parts and maintenance-related requirements."],
+  ["Agriculture", "Irrigation pumps, motors, mechanical equipment, industrial spare parts and related electrical and mechanical requirements."],
+  ["Energy & Power", "Alternators, motors, rotating equipment, electrical equipment, mechanical components and related industrial requirements."],
+  ["Food & Beverage", "Pumps, motors, gearboxes, mechanical components, industrial spare parts and maintenance-related requirements."],
   ["Marine", "Motors, alternators, pumps, bearings, couplings and other electrical and mechanical equipment."],
-  ["Industrial Infrastructure", "Electrical equipment, mechanical equipment, industrial spare parts, maintenance support and technical solutions."],
+  ["Industrial Infrastructure", "Electrical equipment, mechanical equipment, industrial spare parts, rotating equipment and maintenance-related requirements."],
 ];
 
 function Industries() {
@@ -34,7 +34,7 @@ function Industries() {
       <PageHero
         eyebrow="Industries"
         title="Industries we serve"
-        intro="If your company operates in one of these industries and has an electrical, mechanical or industrial requirement, you can approach Nexbridge. We identify suitable solutions and source them by working with qualified suppliers and service providers."
+        intro="Nexbridge supports industrial customers across a range of sectors by helping them identify and source the right electrical, mechanical and industrial products, services and technical solutions. The specific requirement may vary by industry, but our role remains the same: understand the requirement, identify suitable options and coordinate with qualified suppliers and service providers."
       />
 
       <Section>
@@ -50,7 +50,7 @@ function Industries() {
 
       <CtaBanner
         title="Have an Industrial Requirement?"
-        text="Tell us what you need and Nexbridge will help identify and source the right product, service or technical solution."
+        text="Tell us what you need and Nexbridge will help identify, source and coordinate the right product, service or technical solution through qualified suppliers and service providers."
         label="Request a Quote"
       />
     </>
