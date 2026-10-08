@@ -6,9 +6,9 @@ import mechanicalImg from "@/assets/mechanical.jpg";
 import sourcingImg from "@/assets/sourcing.jpg";
 import { CtaBanner, Section, SectionHeading } from "@/components/site/Bits";
 
-const title = "Connecting Industry With the Right Engineering Solutions";
+const title = "Source the Right Industrial Solution";
 const description =
-  "Nexbridge helps industrial customers source electrical, mechanical and industrial products and services through qualified suppliers and service providers.";
+  "Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -26,19 +26,19 @@ const areas = [
   {
     icon: Zap,
     title: "Electrical",
-    text: "Electrical products and technical solutions sourced through qualified suppliers and service providers — motors, alternators, testing and maintenance.",
+    text: "Electrical products and technical solutions for industrial requirements — electric motors, alternators, testing, maintenance and related equipment.",
     img: electricalImg,
   },
   {
     icon: Cog,
     title: "Mechanical",
-    text: "Mechanical products and technical solutions sourced through qualified suppliers and service providers — pumps, bearings, seals, couplings, gearboxes, alignment and maintenance.",
+    text: "Mechanical products and technical solutions for industrial requirements — pumps, bearings, seals, couplings, gearboxes, alignment and maintenance.",
     img: mechanicalImg,
   },
   {
     icon: PackageSearch,
     title: "Industrial Support",
-    text: "Industrial equipment, spare parts and technical support sourced and coordinated through our qualified network.",
+    text: "Industrial equipment, spare parts, maintenance support, repair services and other technical requirements.",
     img: sourcingImg,
   },
 ];
@@ -75,13 +75,17 @@ function Home() {
           className="absolute inset-0 h-full w-full object-cover opacity-25"
         />
         <div className="container-page relative py-24 md:py-32">
-          <p className="eyebrow">Electrical • Mechanical • Industrial Supply</p>
+          <p className="eyebrow">Electrical • Mechanical • Industrial Solutions</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">
-            Connecting Industry With the Right Engineering Solutions
+            Source the Right Industrial Solution
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
-            Nexbridge helps industrial customers source the right electrical, mechanical and
-            industrial products and services through qualified suppliers and service providers.
+            Nexbridge helps industrial customers find and source the right electrical, mechanical
+            and industrial products, services and technical solutions.
+          </p>
+          <p className="mt-3 max-w-2xl text-lg text-primary-foreground/80">
+            Tell us what you need. We help identify suitable options, obtain pricing and coordinate
+            the solution.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -103,8 +107,8 @@ function Home() {
       <Section>
         <SectionHeading
           eyebrow="What We Do"
-          title="Have an industrial requirement? Come to us directly."
-          intro="We help industrial customers find and source the right products, services and technical solutions through our network of qualified suppliers and service providers."
+          title="Have an Industrial Requirement? Start With Us."
+          intro="From a specific component to a complete equipment requirement, Nexbridge helps you identify, source and coordinate the right solution."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {areas.map((area) => (
@@ -137,7 +141,7 @@ function Home() {
         <SectionHeading
           eyebrow="Industries"
           title="Built for demanding industrial environments"
-          intro="We work with procurement and maintenance departments in sectors where downtime is expensive and equipment reliability matters."
+          intro="We support procurement, maintenance and operations teams across industries where equipment reliability, availability and timely sourcing matter."
         />
         <div className="mt-10 grid grid-cols-2 gap-px bg-border md:grid-cols-4">
           {industries.map((industry) => (
@@ -160,7 +164,7 @@ function Home() {
             <SectionHeading
               eyebrow="For Suppliers, Service Providers & Manufacturers"
               title="A Channel to Industrial Customers"
-              intro="Nexbridge helps engineering manufacturers, OEMs and service providers reach industrial customers and develop new business opportunities across African markets."
+              intro="Nexbridge helps manufacturers, OEMs, suppliers and technical service providers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets."
             />
             <Link
               to="/technical-sales"
@@ -182,17 +186,17 @@ function Home() {
       <Section muted>
         <SectionHeading
           eyebrow="Why Work With Us?"
-          title="One point of contact for your industrial requirements"
-          intro="We combine technical understanding with a network of qualified suppliers and service providers — sourcing, quoting and coordinating the right solution for you."
+          title="One Point of Contact for Your Requirement"
+          intro="Nexbridge combines technical understanding with commercial sourcing to help identify, quote and coordinate the right solution for your requirement."
         />
         <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {[
-            ["Technical expertise", "Every enquiry is technically reviewed before we source and quote."],
-            ["Reliable sourcing", "A network of qualified suppliers, service providers and manufacturers."],
-            ["Fast response", "Enquiries acknowledged quickly, with clear lead times up front."],
-            ["One point of contact", "We quote, coordinate the solution and manage the relationship — we do not simply refer you elsewhere."],
-            ["Honest advice", "If a part is unsuitable or unavailable, we say so and suggest alternatives."],
-            ["Africa-wide experience", "We understand logistics and delivery realities across African markets."],
+            ["Technical expertise", "We review the technical requirement carefully before identifying suitable products or solutions."],
+            ["Reliable sourcing", "We focus on suitable products, clear specifications, practical lead times and commercially relevant options."],
+            ["Fast response", "We acknowledge enquiries promptly and provide clear information on availability, lead times and next steps where available."],
+            ["One point of contact", "We help manage the commercial process from requirement through quotation and coordination. We do not simply refer you elsewhere."],
+            ["Honest advice", "If a requested product or solution is unsuitable or unavailable, we will explain the situation and help identify practical alternatives where possible."],
+            ["African Market Focus", "We focus on connecting industrial customers and technical businesses with opportunities across African markets."],
           ].map(([heading, text]) => (
             <div key={heading} className="bg-background p-6">
               <h3 className="text-sm font-bold text-primary">{heading}</h3>
@@ -202,7 +206,7 @@ function Home() {
         </div>
       </Section>
 
-      <CtaBanner text="Tell us what you need. Nexbridge will help identify and coordinate the right product, service or technical solution through our qualified supplier and service-provider network." />
+      <CtaBanner text="Tell us what you need. Nexbridge will help identify, source and coordinate the right product, service or technical solution for your requirement." />
     </>
   );
 }
