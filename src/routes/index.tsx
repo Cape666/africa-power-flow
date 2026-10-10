@@ -72,8 +72,9 @@ function Home() {
           alt="Industrial electric motor and pump set being inspected by an engineer"
           width={1920}
           height={1088}
-          className="absolute inset-0 h-full w-full object-cover opacity-25"
+          className="absolute inset-0 h-full w-full object-cover opacity-60"
         />
+        <div aria-hidden="true" className="absolute inset-0 bg-hero-gradient" />
         <div className="container-page relative py-24 md:py-32">
           <p className="eyebrow">Electrical • Mechanical • Industrial Solutions</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">

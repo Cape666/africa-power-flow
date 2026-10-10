@@ -6,7 +6,7 @@
 
 /*
  * Industrial B2B design system.
- * Navy #0B1F33 · Orange #F28C28 · White · Light grey #F3F5F7 · Charcoal #1F2933
+ * Forest #3F5E31 · Green #558042 · Light #6BA253 · Pale #EAF2E5 · Soft #CFE1C3 · White
  */
 
 @theme inline {
@@ -42,33 +42,41 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --shadow-card: 0 1px 2px oklch(0.22 0.036 249 / 0.06), 0 8px 24px oklch(0.22 0.036 249 / 0.06);
+  --shadow-card: 0 1px 2px rgb(63 94 49 / 0.08), 0 8px 24px rgb(63 94 49 / 0.08);
 }
 
 :root {
   --radius: 0.25rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.28 0.019 250);
-  --surface: oklch(0.968 0.003 247);
-  --surface-foreground: oklch(0.28 0.019 250);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.28 0.019 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.28 0.019 250);
-  --primary: oklch(0.22 0.036 249);
-  --primary-foreground: oklch(0.99 0 0);
-  --navy-soft: oklch(0.32 0.04 249);
-  --secondary: oklch(0.968 0.003 247);
-  --secondary-foreground: oklch(0.22 0.036 249);
-  --muted: oklch(0.968 0.003 247);
-  --muted-foreground: oklch(0.52 0.014 250);
-  --accent: oklch(0.72 0.163 55);
-  --accent-foreground: oklch(0.18 0.03 249);
+  /* Green industrial palette */
+  --forest: #3f5e31;
+  --green: #558042;
+  --green-light: #6ba253;
+  --green-pale: #eaf2e5;
+  --green-soft: #cfe1c3;
+
+  --background: var(--green-pale);
+  --foreground: #2a3f20;
+  --surface: #ffffff;
+  --surface-foreground: #2a3f20;
+  --card: #ffffff;
+  --card-foreground: #2a3f20;
+  --popover: #ffffff;
+  --popover-foreground: #2a3f20;
+  --primary: var(--forest);
+  --primary-foreground: #ffffff;
+  --navy-soft: var(--green-light);
+  --secondary: var(--green-soft);
+  --secondary-foreground: var(--forest);
+  --muted: var(--green-soft);
+  --muted-foreground: #4d6343;
+  --accent: var(--green);
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.9 0.005 247);
-  --input: oklch(0.9 0.005 247);
-  --ring: oklch(0.72 0.163 55);
+  --destructive-foreground: #ffffff;
+  --border: var(--green-soft);
+  --input: var(--green-soft);
+  --ring: var(--green);
+  --gradient-hero: linear-gradient(90deg, var(--forest) 0%, color-mix(in oklab, var(--forest) 85%, transparent) 40%, color-mix(in oklab, var(--green-light) 35%, transparent) 75%, transparent 100%);
 }
 
 @layer base {
@@ -107,4 +115,14 @@
   letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--color-accent);
+}
+
+/* Eyebrows and accent text on dark green backgrounds use soft green for contrast */
+.bg-primary .eyebrow,
+.bg-primary .text-accent {
+  color: var(--green-soft);
+}
+
+@utility bg-hero-gradient {
+  background-image: var(--gradient-hero);
 }
