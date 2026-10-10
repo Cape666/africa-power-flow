@@ -34,7 +34,7 @@ export function Header() {
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
               className="text-sm font-medium text-primary-foreground/75 transition-colors hover:text-primary-foreground"
-              activeProps={{ className: "!text-accent" }}
+              activeProps={{ className: "!text-soft" }}
             >
               {item.label}
             </Link>
@@ -66,7 +66,7 @@ export function Header() {
                 to={item.to}
                 onClick={() => setOpen(false)}
                 className="py-2.5 text-sm font-medium text-primary-foreground/80"
-                activeProps={{ className: "!text-accent" }}
+                activeProps={{ className: "!text-soft" }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
