@@ -24,10 +24,10 @@ export function Footer() {
             Company
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/services" className="hover:text-accent">Services</Link></li>
-            <li><Link to="/industries" className="hover:text-accent">Industries</Link></li>
-            <li><Link to="/equipment-sourcing" className="hover:text-accent">Equipment &amp; Sourcing</Link></li>
-            <li><Link to="/technical-sales" className="hover:text-accent">Technical Sales</Link></li>
+            <li><Link to="/services" className="hover:text-soft">Services</Link></li>
+            <li><Link to="/industries" className="hover:text-soft">Industries</Link></li>
+            <li><Link to="/equipment-sourcing" className="hover:text-soft">Equipment &amp; Sourcing</Link></li>
+            <li><Link to="/technical-sales" className="hover:text-soft">Technical Sales</Link></li>
           </ul>
         </div>
 
@@ -36,9 +36,9 @@ export function Footer() {
             More
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/about" className="hover:text-accent">About</Link></li>
-            <li><Link to="/blog" className="hover:text-accent">Blog</Link></li>
-            <li><Link to="/contact" className="hover:text-accent">Contact</Link></li>
+            <li><Link to="/about" className="hover:text-soft">About</Link></li>
+            <li><Link to="/blog" className="hover:text-soft">Blog</Link></li>
+            <li><Link to="/contact" className="hover:text-soft">Contact</Link></li>
           </ul>
         </div>
       </div>
