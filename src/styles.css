@@ -97,6 +97,13 @@
     border-color: var(--color-border);
   }
 
+  /* Justified paragraph text site-wide; headings, nav, buttons, labels and
+     form fields keep their existing alignment */
+  p {
+    text-align: justify;
+  }
+
+
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);

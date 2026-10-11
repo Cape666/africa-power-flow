@@ -78,7 +78,7 @@ function Home() {
         <div className="container-page relative py-24 md:py-32">
           <p className="eyebrow">Electrical • Mechanical • Industrial Solutions</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">
-            Source the Right <span className="text-soft">Industrial</span> Solution
+            Source the Right Industrial Solution
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-offwhite">
             Nexbridge helps industrial customers find and source the right electrical, mechanical
@@ -108,7 +108,7 @@ function Home() {
       <Section>
         <SectionHeading
           eyebrow="What We Do"
-          title={<>Have an Industrial Requirement? <span className="text-accent">Start</span> With Us.</>}
+          title="Have an Industrial Requirement? Start With Us."
           intro="From a specific component to a complete equipment requirement, Nexbridge helps you identify, source and coordinate the right solution."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -165,7 +165,7 @@ function Home() {
             <SectionHeading
               eyebrow="For Suppliers, Service Providers & Manufacturers"
               dark
-              title={<>A Channel to <span className="text-soft">Industrial</span> Customers</>}
+              title="A Channel to Industrial Customers"
               intro="Nexbridge helps manufacturers, OEMs, suppliers and technical service providers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets."
             />
             <Link
