@@ -79,15 +79,15 @@ function Services() {
       <Section>
         <div className="grid gap-6 lg:grid-cols-3">
           {groups.map((group) => (
-            <article key={group.title} className="flex flex-col items-start border border-border bg-card p-7 shadow-card">
-              <group.icon className="h-7 w-7 text-accent" strokeWidth={1.75} />
+            <article key={group.title} className="flex flex-col items-start border border-t-2 border-border border-t-accent bg-card p-7 shadow-card">
+              <group.icon className="h-7 w-7 text-brand" strokeWidth={1.75} />
               <h2 className="mt-5 text-xl font-bold">{group.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{group.intro}</p>
               <CheckList items={group.items} />
               <p className="mt-6 text-sm leading-relaxed text-foreground">{group.message}</p>
               <Link
                 to="/contact"
-                className="mt-5 inline-block bg-accent px-5 py-2.5 font-display text-xs font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+                className="mt-5 inline-block btn-gold px-5 py-2.5 font-display text-xs font-bold uppercase tracking-widest "
               >
                 Request a Quote
               </Link>
@@ -110,7 +110,7 @@ function Services() {
             ["04", "Coordinate", "We coordinate the agreed solution with you and the appropriate technical or supply partner through to completion."],
           ].map(([num, heading, text]) => (
             <div key={num} className="border-t-2 border-accent bg-background p-6">
-              <span className="font-display text-2xl font-bold text-accent">{num}</span>
+              <span className="font-display text-2xl font-bold text-brand">{num}</span>
               <h3 className="mt-3 text-base font-bold">{heading}</h3>
               <p className="mt-2 text-sm text-muted-foreground">{text}</p>
             </div>

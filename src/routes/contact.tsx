@@ -60,7 +60,7 @@ function Contact() {
                 const IconComp = Icon as typeof Mail;
                 return (
                   <li key={heading as string} className="flex gap-4 bg-surface p-5">
-                    <IconComp className="mt-0.5 h-5 w-5 shrink-0 text-accent" strokeWidth={1.75} />
+                    <IconComp className="mt-0.5 h-5 w-5 shrink-0 text-brand" strokeWidth={1.75} />
                     <div>
                       <h3 className="text-sm font-bold text-primary">{heading as string}</h3>
                       <p className="mt-1 text-sm text-muted-foreground">{text as string}</p>

@@ -18,7 +18,7 @@ export function PageHero({
           {title}
         </h1>
         {intro && (
-          <p className="mt-5 max-w-2xl text-base leading-relaxed text-primary-foreground/75">
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-offwhite">
             {intro}
           </p>
         )}
@@ -30,14 +30,16 @@ export function PageHero({
 export function Section({
   children,
   muted,
+  dark,
   className = "",
 }: {
   children: ReactNode;
   muted?: boolean;
+  dark?: boolean;
   className?: string;
 }) {
   return (
-    <section className={`${muted ? "bg-surface" : "bg-background"} py-16 md:py-20 ${className}`}>
+    <section className={`${dark ? "bg-primary" : muted ? "bg-surface" : "bg-background"} py-16 md:py-20 ${className}`}>
       <div className="container-page">{children}</div>
     </section>
   );
@@ -47,16 +49,20 @@ export function SectionHeading({
   eyebrow,
   title,
   intro,
+  dark,
 }: {
   eyebrow?: string;
-  title: string;
+  title: ReactNode;
   intro?: string;
+  dark?: boolean;
 }) {
   return (
     <div className="max-w-2xl">
       {eyebrow && <p className="eyebrow">{eyebrow}</p>}
-      <h2 className="mt-2 text-2xl font-bold md:text-3xl">{title}</h2>
-      {intro && <p className="mt-4 text-base leading-relaxed text-muted-foreground">{intro}</p>}
+      <h2 className={`mt-2 text-2xl font-bold md:text-3xl ${dark ? "text-primary-foreground" : ""}`}>{title}</h2>
+      {intro && (
+        <p className={`mt-4 text-base leading-relaxed ${dark ? "text-offwhite" : "text-muted-foreground"}`}>{intro}</p>
+      )}
     </div>
   );
 }
@@ -75,11 +81,11 @@ export function CtaBanner({
       <div className="container-page flex flex-col items-start gap-6 md:flex-row md:items-center md:justify-between">
         <div className="max-w-2xl">
           <h2 className="text-2xl font-bold text-primary-foreground md:text-3xl">{title}</h2>
-          <p className="mt-3 text-primary-foreground/75">{text}</p>
+          <p className="mt-3 text-offwhite">{text}</p>
         </div>
         <Link
           to="/contact"
-          className="shrink-0 bg-accent px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+          className="shrink-0 btn-gold px-6 py-3 font-display text-sm font-bold uppercase tracking-widest "
         >
           {label}
         </Link>

@@ -36,7 +36,7 @@ export function SubmitButton({ children }: { children: ReactNode }) {
   return (
     <button
       type="submit"
-      className="w-full bg-accent px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90 sm:w-auto"
+      className="w-full btn-gold px-6 py-3 font-display text-sm font-bold uppercase tracking-widest  sm:w-auto"
     >
       {children}
     </button>

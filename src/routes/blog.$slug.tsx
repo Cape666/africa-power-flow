@@ -54,7 +54,7 @@ function BlogPost() {
         </div>
         <Link
           to="/blog"
-          className="mt-10 inline-block font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-accent"
+          className="mt-10 inline-block font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-brand"
         >
           ← Back to all articles
         </Link>
@@ -67,7 +67,7 @@ function BlogPost() {
             <article key={item.slug} className="bg-background p-6">
               <p className="eyebrow">{item.category}</p>
               <h3 className="mt-3 text-base font-bold">
-                <Link to="/blog/$slug" params={{ slug: item.slug }} className="hover:text-accent">
+                <Link to="/blog/$slug" params={{ slug: item.slug }} className="hover:text-brand">
                   {item.title}
                 </Link>
               </h3>

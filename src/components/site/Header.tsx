@@ -33,15 +33,15 @@ export function Header() {
               key={item.to}
               to={item.to}
               activeOptions={{ exact: item.to === "/" }}
-              className="text-sm font-medium text-primary-foreground/75 transition-colors hover:text-primary-foreground"
-              activeProps={{ className: "!text-soft" }}
+              className="border-b-2 border-transparent py-1 text-sm font-medium text-soft transition-colors hover:border-soft/50"
+              activeProps={{ className: "!border-accent" }}
             >
               {item.label}
             </Link>
           ))}
           <Link
             to="/contact"
-            className="bg-accent px-4 py-2 font-display text-xs font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+            className="btn-gold px-4 py-2 font-display text-xs font-bold uppercase tracking-widest "
           >
             Request a Quote
           </Link>
@@ -65,8 +65,8 @@ export function Header() {
                 key={item.to}
                 to={item.to}
                 onClick={() => setOpen(false)}
-                className="py-2.5 text-sm font-medium text-primary-foreground/80"
-                activeProps={{ className: "!text-soft" }}
+                className="border-l-2 border-transparent py-2.5 pl-3 text-sm font-medium text-soft"
+                activeProps={{ className: "!border-accent" }}
                 activeOptions={{ exact: item.to === "/" }}
               >
                 {item.label}
@@ -75,7 +75,7 @@ export function Header() {
             <Link
               to="/contact"
               onClick={() => setOpen(false)}
-              className="mt-3 bg-accent px-4 py-2.5 text-center font-display text-xs font-bold uppercase tracking-widest text-accent-foreground"
+              className="mt-3 btn-gold px-4 py-2.5 text-center font-display text-xs font-bold uppercase tracking-widest"
             >
               Request a Quote
             </Link>
