@@ -6,7 +6,7 @@ import sourcingImg from "@/assets/sourcing.jpg";
 
 const title = "Industrial Equipment & Technical Sourcing";
 const description =
-  "Tell us what you need and Nexbridge will help identify, source and coordinate the right product, equipment or technical solution through qualified suppliers and service providers.";
+  "Tell us what you need and Kilimanjaro will help identify, source and coordinate the right product, equipment or technical solution through qualified suppliers and service providers.";
 
 const examples = [
   "Electric Motors",
@@ -40,7 +40,7 @@ const industries = [
 export const Route = createFileRoute("/equipment-sourcing")({
   head: () => ({
     meta: [
-      { title: `${title} | Nexbridge Engineering` },
+      { title: `${title} | Kilimanjaro Engineering` },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -57,7 +57,7 @@ function EquipmentSourcing() {
       <PageHero
         eyebrow="Equipment & Sourcing"
         title="Industrial Equipment & Technical Sourcing"
-        intro="Tell us what you need and Nexbridge will help identify, source and coordinate the right product, equipment or technical solution through qualified suppliers and service providers."
+        intro="Tell us what you need and Kilimanjaro will help identify, source and coordinate the right product, equipment or technical solution through qualified suppliers and service providers."
       />
 
       <Section>
@@ -66,7 +66,7 @@ function EquipmentSourcing() {
             <SectionHeading
               eyebrow="How It Works"
               title="A simple sourcing process"
-              intro="Nexbridge coordinates the sourcing process by understanding the customer requirement, identifying suitable options and working with qualified suppliers and service providers to develop the appropriate commercial solution."
+              intro="Kilimanjaro coordinates the sourcing process by understanding the customer requirement, identifying suitable options and working with qualified suppliers and service providers to develop the appropriate commercial solution."
             />
             <div className="mt-8 grid gap-px bg-border">
               {[

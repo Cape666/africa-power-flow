@@ -11,13 +11,13 @@ export const Route = createFileRoute("/blog/$slug")({
   head: ({ loaderData }) => {
     if (!loaderData) {
       return {
-        meta: [{ title: "Article not found | Nexbridge Engineering" }, { name: "robots", content: "noindex" }],
+        meta: [{ title: "Article not found | Kilimanjaro Engineering" }, { name: "robots", content: "noindex" }],
       };
     }
     const { post } = loaderData;
     return {
       meta: [
-        { title: `${post.title} | Nexbridge Engineering` },
+        { title: `${post.title} | Kilimanjaro Engineering` },
         { name: "description", content: post.excerpt },
         { property: "og:title", content: post.title },
         { property: "og:description", content: post.excerpt },

@@ -10,7 +10,7 @@ export function Footer() {
               NB
             </span>
             <span className="font-display text-base font-bold text-primary-foreground">
-              Nexbridge Engineering
+              Kilimanjaro Engineering
             </span>
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
@@ -45,7 +45,7 @@ export function Footer() {
 
       <div className="border-t border-primary-foreground/10">
         <div className="container-page py-5 text-xs text-sage">
-          © {new Date().getFullYear()} Nexbridge Engineering. All rights reserved.
+          © {new Date().getFullYear()} Kilimanjaro Engineering. All rights reserved.
         </div>
       </div>
     </footer>
