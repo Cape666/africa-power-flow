@@ -3,12 +3,12 @@ import { CtaBanner, PageHero, Section } from "@/components/site/Bits";
 
 const title = "Industries We Serve — Mining, Manufacturing, Water, Energy & More";
 const description =
-  "Nexbridge sources products, services and technical solutions for mining, manufacturing, water and wastewater, agriculture, energy and power, food and beverage, marine and industrial infrastructure across Africa.";
+  "Kilimanjaro sources products, services and technical solutions for mining, manufacturing, water and wastewater, agriculture, energy and power, food and beverage, marine and industrial infrastructure across Africa.";
 
 export const Route = createFileRoute("/industries")({
   head: () => ({
     meta: [
-      { title: `${title} | Nexbridge Engineering` },
+      { title: `${title} | Kilimanjaro Engineering` },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -34,7 +34,7 @@ function Industries() {
       <PageHero
         eyebrow="Industries"
         title="Industries we serve"
-        intro="Nexbridge supports industrial customers across a range of sectors by helping them identify and source the right electrical, mechanical and industrial products, services and technical solutions. The specific requirement may vary by industry, but our role remains the same: understand the requirement, identify suitable options and coordinate with qualified suppliers and service providers."
+        intro="Kilimanjaro supports industrial customers across a range of sectors by helping them identify and source the right electrical, mechanical and industrial products, services and technical solutions. The specific requirement may vary by industry, but our role remains the same: understand the requirement, identify suitable options and coordinate with qualified suppliers and service providers."
       />
 
       <Section>
@@ -50,7 +50,7 @@ function Industries() {
 
       <CtaBanner
         title="Have an Industrial Requirement?"
-        text="Tell us what you need and Nexbridge will help identify, source and coordinate the right product, service or technical solution through qualified suppliers and service providers."
+        text="Tell us what you need and Kilimanjaro will help identify, source and coordinate the right product, service or technical solution through qualified suppliers and service providers."
         label="Request a Quote"
       />
     </>

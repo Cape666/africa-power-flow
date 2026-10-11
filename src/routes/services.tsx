@@ -4,12 +4,12 @@ import { CheckList, CtaBanner, Section, SectionHeading, PageHero } from "@/compo
 
 const title = "Services — Electrical, Mechanical & Industrial Support";
 const description =
-  "Electrical, mechanical and industrial support solutions sourced and coordinated by Nexbridge through qualified suppliers and service providers.";
+  "Electrical, mechanical and industrial support solutions sourced and coordinated by Kilimanjaro through qualified suppliers and service providers.";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: `${title} | Nexbridge Engineering` },
+      { title: `${title} | Kilimanjaro Engineering` },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -73,7 +73,7 @@ function Services() {
       <PageHero
         eyebrow="Services"
         title="Electrical, Mechanical and Industrial Support"
-        intro="Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers."
+        intro="Kilimanjaro helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers."
       />
 
       <Section>

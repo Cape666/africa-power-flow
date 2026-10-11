@@ -8,7 +8,7 @@ const description =
 export const Route = createFileRoute("/technical-sales")({
   head: () => ({
     meta: [
-      { title: `${title} | Nexbridge Engineering` },
+      { title: `${title} | Kilimanjaro Engineering` },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -40,7 +40,7 @@ function TechnicalSales() {
           <SectionHeading
             eyebrow="What We Offer"
             title="A technical partner on the ground"
-            intro="Many manufacturers and suppliers have strong products but may not have direct access to industrial customers in African markets. Nexbridge helps bridge this gap by identifying opportunities, understanding customer requirements and supporting the technical-commercial sales process."
+            intro="Many manufacturers and suppliers have strong products but may not have direct access to industrial customers in African markets. Kilimanjaro helps bridge this gap by identifying opportunities, understanding customer requirements and supporting the technical-commercial sales process."
           />
           <div className="grid gap-px bg-border sm:grid-cols-2">
             {capabilities.map(([heading, text]) => (
@@ -92,7 +92,7 @@ function TechnicalSales() {
         <SectionHeading
           eyebrow="Why Partner With Us?"
           title="What suppliers gain from working with us"
-          intro="Subject to agreed commercial arrangements, Nexbridge supports suppliers in developing opportunities with industrial customers in African markets."
+          intro="Subject to agreed commercial arrangements, Kilimanjaro supports suppliers in developing opportunities with industrial customers in African markets."
         />
         <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {[

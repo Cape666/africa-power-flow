@@ -23,7 +23,7 @@ export function Header() {
             NB
           </span>
           <span className="font-display text-base font-bold tracking-tight text-primary-foreground">
-            Nexbridge Engineering
+            Kilimanjaro Engineering
           </span>
         </Link>
 

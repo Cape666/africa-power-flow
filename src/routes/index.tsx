@@ -8,12 +8,12 @@ import { CtaBanner, Section, SectionHeading } from "@/components/site/Bits";
 
 const title = "Source the Right Industrial Solution";
 const description =
-  "Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers.";
+  "Kilimanjaro helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: `${title} | Nexbridge Engineering` },
+      { title: `${title} | Kilimanjaro Engineering` },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -81,7 +81,7 @@ function Home() {
             Source the Right Industrial Solution
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-offwhite">
-            Nexbridge helps industrial customers find and source the right electrical, mechanical
+            Kilimanjaro helps industrial customers find and source the right electrical, mechanical
             and industrial products, services and technical solutions.
           </p>
           <p className="mt-3 max-w-2xl text-lg text-offwhite">
@@ -109,7 +109,7 @@ function Home() {
         <SectionHeading
           eyebrow="What We Do"
           title="Have an Industrial Requirement? Start With Us."
-          intro="From a specific component to a complete equipment requirement, Nexbridge helps you identify, source and coordinate the right solution."
+          intro="From a specific component to a complete equipment requirement, Kilimanjaro helps you identify, source and coordinate the right solution."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {areas.map((area) => (
@@ -132,7 +132,7 @@ function Home() {
         </div>
         <Link
           to="/services"
-          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-brand"
+          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-soft hover:text-olive-gold"
         >
           View all services <ArrowRight className="h-4 w-4" />
         </Link>
@@ -153,7 +153,7 @@ function Home() {
         </div>
         <Link
           to="/industries"
-          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-brand"
+          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-soft hover:text-olive-gold"
         >
           Explore industries <ArrowRight className="h-4 w-4" />
         </Link>
@@ -166,7 +166,7 @@ function Home() {
               eyebrow="For Suppliers, Service Providers & Manufacturers"
               dark
               title="A Channel to Industrial Customers"
-              intro="Nexbridge helps manufacturers, OEMs, suppliers and technical service providers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets."
+              intro="Kilimanjaro helps manufacturers, OEMs, suppliers and technical service providers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets."
             />
             <Link
               to="/technical-sales"
@@ -189,7 +189,7 @@ function Home() {
         <SectionHeading
           eyebrow="Why Work With Us?"
           title="One Point of Contact for Your Requirement"
-          intro="Nexbridge combines technical understanding with commercial sourcing to help identify, quote and coordinate the right solution for your requirement."
+          intro="Kilimanjaro combines technical understanding with commercial sourcing to help identify, quote and coordinate the right solution for your requirement."
         />
         <div className="mt-10 grid gap-px bg-border sm:grid-cols-2 lg:grid-cols-3">
           {[
@@ -208,7 +208,7 @@ function Home() {
         </div>
       </Section>
 
-      <CtaBanner text="Tell us what you need. Nexbridge will help identify, source and coordinate the right product, service or technical solution for your requirement." />
+      <CtaBanner text="Tell us what you need. Kilimanjaro will help identify, source and coordinate the right product, service or technical solution for your requirement." />
     </>
   );
 }

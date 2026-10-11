@@ -4,12 +4,12 @@ import workshopImg from "@/assets/mechanical.jpg";
 
 const title = "About Us — Technical-Commercial Sourcing for Industry";
 const description =
-  "Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers across Africa.";
+  "Kilimanjaro helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers across Africa.";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: `${title} | Nexbridge Engineering` },
+      { title: `${title} | Kilimanjaro Engineering` },
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
@@ -24,7 +24,7 @@ function About() {
       <PageHero
         eyebrow="About"
         title="A technical-commercial bridge for African industry"
-        intro="Nexbridge helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers."
+        intro="Kilimanjaro helps industrial customers source the right products, services and technical solutions by working with qualified suppliers and service providers."
       />
 
       <Section>
@@ -33,7 +33,7 @@ function About() {
             <SectionHeading eyebrow="Who We Are" title="Technical expertise, customer-focused" />
             <div className="mt-5 space-y-4 text-base leading-relaxed text-muted-foreground sm:text-justify">
               <p>
-                Nexbridge helps industrial customers find and source the right electrical,
+                Kilimanjaro helps industrial customers find and source the right electrical,
                 mechanical and industrial products, services and technical solutions. We work with
                 qualified suppliers, service providers and technical partners to help customers
                 meet their specific requirements.
@@ -41,7 +41,7 @@ function About() {
               <p>
                 Our role is to understand the customer's requirement, identify suitable solutions,
                 obtain relevant commercial options and coordinate with the appropriate supplier or
-                service provider. Where appropriate, Nexbridge can provide the customer with a
+                service provider. Where appropriate, Kilimanjaro can provide the customer with a
                 direct commercial quotation and manage the opportunity through to fulfilment.
               </p>
               <p>
@@ -74,7 +74,7 @@ function About() {
             new business opportunities in African markets.
           </p>
           <p>
-            By building reliable relationships between customers and technical partners, Nexbridge
+            By building reliable relationships between customers and technical partners, Kilimanjaro
             aims to create practical, commercially sustainable solutions for industry.
           </p>
         </div>
