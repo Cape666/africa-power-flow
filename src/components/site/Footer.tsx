@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground/70">
+    <footer className="bg-ink text-sage">
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5">
@@ -24,10 +24,10 @@ export function Footer() {
             Company
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/services" className="hover:text-soft">Services</Link></li>
-            <li><Link to="/industries" className="hover:text-soft">Industries</Link></li>
-            <li><Link to="/equipment-sourcing" className="hover:text-soft">Equipment &amp; Sourcing</Link></li>
-            <li><Link to="/technical-sales" className="hover:text-soft">Technical Sales</Link></li>
+            <li><Link to="/services" className="text-soft hover:text-primary-foreground">Services</Link></li>
+            <li><Link to="/industries" className="text-soft hover:text-primary-foreground">Industries</Link></li>
+            <li><Link to="/equipment-sourcing" className="text-soft hover:text-primary-foreground">Equipment &amp; Sourcing</Link></li>
+            <li><Link to="/technical-sales" className="text-soft hover:text-primary-foreground">Technical Sales</Link></li>
           </ul>
         </div>
 
@@ -36,15 +36,15 @@ export function Footer() {
             More
           </h3>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/about" className="hover:text-soft">About</Link></li>
-            <li><Link to="/blog" className="hover:text-soft">Blog</Link></li>
-            <li><Link to="/contact" className="hover:text-soft">Contact</Link></li>
+            <li><Link to="/about" className="text-soft hover:text-primary-foreground">About</Link></li>
+            <li><Link to="/blog" className="text-soft hover:text-primary-foreground">Blog</Link></li>
+            <li><Link to="/contact" className="text-soft hover:text-primary-foreground">Contact</Link></li>
           </ul>
         </div>
       </div>
 
       <div className="border-t border-primary-foreground/10">
-        <div className="container-page py-5 text-xs">
+        <div className="container-page py-5 text-xs text-sage">
           © {new Date().getFullYear()} Nexbridge Engineering. All rights reserved.
         </div>
       </div>

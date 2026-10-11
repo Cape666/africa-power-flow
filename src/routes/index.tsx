@@ -78,13 +78,13 @@ function Home() {
         <div className="container-page relative py-24 md:py-32">
           <p className="eyebrow">Electrical • Mechanical • Industrial Solutions</p>
           <h1 className="mt-4 max-w-4xl text-4xl font-bold leading-tight text-primary-foreground md:text-6xl">
-            Source the Right Industrial Solution
+            Source the Right <span className="text-soft">Industrial</span> Solution
           </h1>
-          <p className="mt-6 max-w-2xl text-lg text-primary-foreground/80">
+          <p className="mt-6 max-w-2xl text-lg text-offwhite">
             Nexbridge helps industrial customers find and source the right electrical, mechanical
             and industrial products, services and technical solutions.
           </p>
-          <p className="mt-3 max-w-2xl text-lg text-primary-foreground/80">
+          <p className="mt-3 max-w-2xl text-lg text-offwhite">
             Tell us what you need. We help identify suitable options, obtain pricing and coordinate
             the solution.
           </p>
@@ -97,7 +97,7 @@ function Home() {
             </Link>
             <Link
               to="/technical-sales"
-              className="border border-primary-foreground/40 px-7 py-3.5 text-center font-display text-sm font-bold uppercase tracking-widest text-primary-foreground transition-colors hover:bg-primary-foreground/10"
+              className="btn-gold px-7 py-3.5 text-center font-display text-sm font-bold uppercase tracking-widest"
             >
               Become a Partner
             </Link>
@@ -108,12 +108,12 @@ function Home() {
       <Section>
         <SectionHeading
           eyebrow="What We Do"
-          title="Have an Industrial Requirement? Start With Us."
+          title={<>Have an Industrial Requirement? <span className="text-accent">Start</span> With Us.</>}
           intro="From a specific component to a complete equipment requirement, Nexbridge helps you identify, source and coordinate the right solution."
         />
         <div className="mt-12 grid gap-6 md:grid-cols-3">
           {areas.map((area) => (
-            <article key={area.title} className="border border-border bg-card shadow-card">
+            <article key={area.title} className="border border-t-2 border-border border-t-accent bg-card shadow-card">
               <img
                 src={area.img}
                 alt={area.title}
@@ -159,12 +159,13 @@ function Home() {
         </Link>
       </Section>
 
-      <Section>
+      <Section dark>
         <div className="grid items-start gap-12 lg:grid-cols-2">
           <div>
             <SectionHeading
               eyebrow="For Suppliers, Service Providers & Manufacturers"
-              title="A Channel to Industrial Customers"
+              dark
+              title={<>A Channel to <span className="text-soft">Industrial</span> Customers</>}
               intro="Nexbridge helps manufacturers, OEMs, suppliers and technical service providers identify industrial opportunities, develop customer relationships and support technical-commercial sales across African markets."
             />
             <Link

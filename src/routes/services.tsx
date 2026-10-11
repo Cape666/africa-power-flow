@@ -79,7 +79,7 @@ function Services() {
       <Section>
         <div className="grid gap-6 lg:grid-cols-3">
           {groups.map((group) => (
-            <article key={group.title} className="flex flex-col items-start border border-border bg-card p-7 shadow-card">
+            <article key={group.title} className="flex flex-col items-start border border-t-2 border-border border-t-accent bg-card p-7 shadow-card">
               <group.icon className="h-7 w-7 text-brand" strokeWidth={1.75} />
               <h2 className="mt-5 text-xl font-bold">{group.title}</h2>
               <p className="mt-2 text-sm text-muted-foreground">{group.intro}</p>
