@@ -41,7 +41,7 @@ export function Header() {
           ))}
           <Link
             to="/contact"
-            className="bg-accent px-4 py-2 font-display text-xs font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+            className="btn-gold px-4 py-2 font-display text-xs font-bold uppercase tracking-widest "
           >
             Request a Quote
           </Link>

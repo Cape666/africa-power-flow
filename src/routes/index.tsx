@@ -91,7 +91,7 @@ function Home() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <Link
               to="/contact"
-              className="bg-accent px-7 py-3.5 text-center font-display text-sm font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+              className="btn-gold px-7 py-3.5 text-center font-display text-sm font-bold uppercase tracking-widest "
             >
               Request a Quote
             </Link>
@@ -123,7 +123,7 @@ function Home() {
                 className="h-44 w-full object-cover"
               />
               <div className="p-6">
-                <area.icon className="h-6 w-6 text-accent" strokeWidth={1.75} />
+                <area.icon className="h-6 w-6 text-brand" strokeWidth={1.75} />
                 <h3 className="mt-4 text-lg font-bold">{area.title}</h3>
                 <p className="mt-2.5 text-sm leading-relaxed text-muted-foreground">{area.text}</p>
               </div>
@@ -132,7 +132,7 @@ function Home() {
         </div>
         <Link
           to="/services"
-          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-accent"
+          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-brand"
         >
           View all services <ArrowRight className="h-4 w-4" />
         </Link>
@@ -153,7 +153,7 @@ function Home() {
         </div>
         <Link
           to="/industries"
-          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-accent"
+          className="mt-9 inline-flex items-center gap-2 font-display text-sm font-bold uppercase tracking-widest text-primary hover:text-brand"
         >
           Explore industries <ArrowRight className="h-4 w-4" />
         </Link>
@@ -169,7 +169,7 @@ function Home() {
             />
             <Link
               to="/technical-sales"
-              className="mt-8 inline-block bg-accent px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+              className="mt-8 inline-block btn-gold px-6 py-3 font-display text-sm font-bold uppercase tracking-widest "
             >
               Become a Partner
             </Link>

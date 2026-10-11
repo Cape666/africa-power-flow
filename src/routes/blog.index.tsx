@@ -48,7 +48,7 @@ function BlogIndex() {
             <Link
               to="/blog/$slug"
               params={{ slug: featured.slug }}
-              className="hover:text-accent"
+              className="hover:text-brand"
             >
               {featured.title}
             </Link>
@@ -66,7 +66,7 @@ function BlogIndex() {
             <article key={post.slug} className="bg-background p-7">
               <p className="eyebrow">{post.category}</p>
               <h2 className="mt-3 text-lg font-bold">
-                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-accent">
+                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-brand">
                   {post.title}
                 </Link>
               </h2>

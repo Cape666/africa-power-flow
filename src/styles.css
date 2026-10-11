@@ -6,7 +6,7 @@
 
 /*
  * Industrial B2B design system.
- * Forest #3F5E31 · Green #558042 · Light #6BA253 · Pale #EAF2E5 · Soft #CFE1C3 · White
+ * Deep forest #2F4F3A · Gold #CFAE60 · Soft gold #DBC287 · Stone #F6F3EC · Ink #20261F
  */
 
 @theme inline {
@@ -35,7 +35,13 @@
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
-  --color-soft: var(--green-soft);
+  --color-soft: var(--gold-soft);
+  --color-brand: var(--green);
+  --color-ink: var(--ink);
+  --color-sage: var(--sage);
+  --color-offwhite: var(--offwhite);
+  --color-olive-gold: var(--olive-gold);
+  --color-gold-hover: var(--gold-hover);
   --color-accent-foreground: var(--accent-foreground);
   --color-destructive: var(--destructive);
   --color-destructive-foreground: var(--destructive-foreground);
@@ -43,42 +49,48 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ring-offset-background: var(--background);
-  --shadow-card: 0 1px 2px rgb(63 94 49 / 0.08), 0 8px 24px rgb(63 94 49 / 0.08);
+  --shadow-card: 0 1px 2px rgb(47 79 58 / 0.08), 0 8px 24px rgb(47 79 58 / 0.08);
 }
 
 :root {
   --radius: 0.25rem;
-  /* Green industrial palette */
-  --forest: #3f5e31;
+  /* Forest & gold palette */
+  --forest: #2f4f3a;
+  --gold: #cfae60;
+  --gold-hover: #c2993a;
+  --gold-soft: #dbc287;
+  --olive-gold: #8a7238;
+  --stone: #f6f3ec;
+  --ink: #20261f;
+  --sage: #b9c4b4;
+  --offwhite: #edeae1;
   --green: #558042;
-  --green-light: #6ba253;
-  --green-pale: #eaf2e5;
-  --green-soft: #cfe1c3;
 
-  --background: var(--green-pale);
-  --foreground: #2a3f20;
+  --background: var(--stone);
+  --foreground: var(--ink);
   --surface: #ffffff;
-  --surface-foreground: #2a3f20;
+  --surface-foreground: var(--ink);
   --card: #ffffff;
-  --card-foreground: #2a3f20;
+  --card-foreground: var(--ink);
   --popover: #ffffff;
-  --popover-foreground: #2a3f20;
+  --popover-foreground: var(--ink);
   --primary: var(--forest);
   --primary-foreground: #ffffff;
-  --navy-soft: var(--green-light);
-  --secondary: var(--green-soft);
+  --navy-soft: var(--green);
+  --secondary: var(--stone);
   --secondary-foreground: var(--forest);
-  --muted: var(--green-soft);
-  --muted-foreground: #4d6343;
-  --accent: var(--green);
-  --accent-foreground: #ffffff;
+  --muted: var(--stone);
+  --muted-foreground: #4f564d;
+  --accent: var(--gold);
+  --accent-foreground: var(--ink);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #ffffff;
-  --border: var(--green-soft);
-  --input: var(--green-soft);
-  --ring: var(--green);
-  --gradient-hero: linear-gradient(90deg, var(--forest) 0%, color-mix(in oklab, var(--forest) 85%, transparent) 40%, color-mix(in oklab, var(--green-light) 35%, transparent) 75%, transparent 100%);
+  --border: #e3ddcf;
+  --input: #e3ddcf;
+  --ring: var(--gold);
+  --gradient-hero: linear-gradient(90deg, var(--forest) 0%, color-mix(in oklab, var(--forest) 88%, transparent) 40%, color-mix(in oklab, var(--forest) 35%, transparent) 75%, transparent 100%);
 }
+
 
 @layer base {
   * {
@@ -97,7 +109,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    color: var(--color-primary);
+    color: var(--color-foreground);
     letter-spacing: -0.015em;
   }
 }
@@ -115,15 +127,24 @@
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--olive-gold);
 }
 
-/* Eyebrows and accent text on dark green backgrounds use soft green for contrast */
-.bg-primary .eyebrow,
-.bg-primary .text-accent {
-  color: var(--green-soft);
+/* On dark green sections: soft gold eyebrows, off-white paragraphs */
+.bg-primary .eyebrow {
+  color: var(--gold-soft);
 }
 
 @utility bg-hero-gradient {
   background-image: var(--gradient-hero);
+}
+
+/* Gold call-to-action buttons darken on hover */
+@utility btn-gold {
+  background-color: var(--gold);
+  color: var(--ink);
+  transition: background-color 150ms;
+  &:hover {
+    background-color: var(--gold-hover);
+  }
 }

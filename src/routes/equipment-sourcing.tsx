@@ -76,7 +76,7 @@ function EquipmentSourcing() {
                 ["We Coordinate the Requirement", "We help coordinate the requirement between the customer and the appropriate supplier or service provider through the agreed commercial process."],
               ].map(([heading, text], i) => (
                 <div key={heading} className="flex gap-4 bg-surface p-5">
-                  <span className="font-display text-sm font-bold text-accent">0{i + 1}</span>
+                  <span className="font-display text-sm font-bold text-brand">0{i + 1}</span>
                   <div>
                     <h3 className="text-sm font-bold text-primary">{heading}</h3>
                     <p className="mt-1 text-sm text-muted-foreground">{text}</p>

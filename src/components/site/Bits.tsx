@@ -79,7 +79,7 @@ export function CtaBanner({
         </div>
         <Link
           to="/contact"
-          className="shrink-0 bg-accent px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+          className="shrink-0 btn-gold px-6 py-3 font-display text-sm font-bold uppercase tracking-widest "
         >
           {label}
         </Link>

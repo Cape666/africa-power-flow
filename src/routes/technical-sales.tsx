@@ -80,7 +80,7 @@ function TechnicalSales() {
             />
             <Link
               to="/contact"
-              className="mt-8 inline-block bg-accent px-6 py-3 font-display text-sm font-bold uppercase tracking-widest text-accent-foreground transition-opacity hover:opacity-90"
+              className="mt-8 inline-block btn-gold px-6 py-3 font-display text-sm font-bold uppercase tracking-widest "
             >
               Become a Partner
             </Link>
