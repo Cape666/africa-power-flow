@@ -2,7 +2,14 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { Mail, MessageCircle, Globe } from "lucide-react";
 import { PageHero, Section } from "@/components/site/Bits";
-import { Field, Select, SubmitButton, SuccessNote, TextArea, TextInput } from "@/components/site/FormBits";
+import {
+  Field,
+  Select,
+  SubmitButton,
+  SuccessNote,
+  TextArea,
+  TextInput,
+} from "@/components/site/FormBits";
 
 const title = "Contact Us — Enquiries, Quotes & Partnerships";
 const description =
@@ -33,6 +40,8 @@ const enquiryTypes = [
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   return (
     <>
@@ -54,8 +63,16 @@ function Contact() {
             <ul className="mt-8 grid gap-px bg-border">
               {[
                 [Mail, "Email enquiries", "Send specifications, drawings and part numbers."],
-                [MessageCircle, "Phone / WhatsApp", "Share the number you prefer and we will call."],
-                [Globe, "Across Africa", "We work with customers and suppliers throughout the continent."],
+                [
+                  MessageCircle,
+                  "Phone / WhatsApp",
+                  "Share the number you prefer and we will call.",
+                ],
+                [
+                  Globe,
+                  "Across Africa",
+                  "We work with customers and suppliers throughout the continent.",
+                ],
               ].map(([Icon, heading, text]) => {
                 const IconComp = Icon as typeof Mail;
                 return (
@@ -79,12 +96,38 @@ function Contact() {
               </SuccessNote>
             ) : (
               <form
+                name="contact"
+                method="POST"
+                action="/"
+                encType="multipart/form-data"
+                data-netlify="true"
                 className="grid gap-5"
-                onSubmit={(e) => {
+                onSubmit={async (e) => {
                   e.preventDefault();
-                  setSent(true);
+                  setError(null);
+                  setSubmitting(true);
+
+                  try {
+                    const response = await fetch("/", {
+                      method: "POST",
+                      body: new FormData(e.currentTarget),
+                    });
+
+                    if (!response.ok) {
+                      throw new Error(`Netlify returned ${response.status}`);
+                    }
+
+                    setSent(true);
+                  } catch {
+                    setError(
+                      "We couldn't send your enquiry. Please check your connection and try again.",
+                    );
+                  } finally {
+                    setSubmitting(false);
+                  }
                 }}
               >
+                <input type="hidden" name="form-name" value="contact" />
                 <div className="grid gap-5 sm:grid-cols-2">
                   <Field label="Name">
                     <TextInput name="name" required placeholder="Full name" />
@@ -129,7 +172,12 @@ function Contact() {
                     className="w-full border border-input bg-background px-3 py-2.5 text-sm file:mr-3 file:border-0 file:bg-primary file:px-3 file:py-1.5 file:font-display file:text-xs file:font-bold file:uppercase file:tracking-widest file:text-primary-foreground"
                   />
                 </Field>
-                <SubmitButton>Request a Quote</SubmitButton>
+                {error && (
+                  <p role="alert" className="text-sm text-destructive">
+                    {error}
+                  </p>
+                )}
+                <SubmitButton>{submitting ? "Sending..." : "Request a Quote"}</SubmitButton>
               </form>
             )}
           </div>
