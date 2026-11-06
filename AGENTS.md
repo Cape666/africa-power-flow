@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+Blog publication status and structured article sections live in `src/data/posts.ts`; unpublished posts stay archived there and are filtered by the existing blog routes.

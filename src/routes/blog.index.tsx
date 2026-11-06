@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/site/Bits";
-import { categories, formatDate, posts } from "@/data/posts";
+import motorImage from "@/assets/electrical.jpg";
+import { categories, formatDate, publishedPosts } from "@/data/posts";
 
 const title = "Engineering Insights Blog — Motors, Pumps, Maintenance & Sourcing";
 const description =
@@ -13,14 +14,18 @@ export const Route = createFileRoute("/blog/")({
       { name: "description", content: description },
       { property: "og:title", content: title },
       { property: "og:description", content: description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "https://africa-power-flow.lovable.app/blog" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://africa-power-flow.lovable.app/blog" }],
   }),
   component: BlogIndex,
 });
 
 function BlogIndex() {
-  const featured = posts[0]!;
-  const rest = posts.slice(1);
+  const featured = publishedPosts[0];
+  if (!featured) return null;
 
   return (
     <>
@@ -31,18 +36,12 @@ function BlogIndex() {
       />
 
       <Section>
-        <div className="flex flex-wrap gap-2">
-          {categories.map((category) => (
-            <span
-              key={category}
-              className="border border-border bg-surface px-3 py-1.5 font-display text-xs font-bold uppercase tracking-widest text-primary"
-            >
-              {category}
-            </span>
-          ))}
-        </div>
-
         <article className="mt-10 border border-border bg-card p-8 shadow-card">
+          <img
+            src={motorImage}
+            alt={featured.imageAlt ?? "Industrial electric motor"}
+            className="mb-6 aspect-[16/7] w-full object-cover"
+          />
           <p className="eyebrow">{featured.category}</p>
           <h2 className="mt-3 text-2xl font-bold md:text-3xl">
             <Link
@@ -60,23 +59,6 @@ function BlogIndex() {
             {formatDate(featured.date)} · {featured.readingTime}
           </p>
         </article>
-
-        <div className="mt-8 grid gap-px bg-border md:grid-cols-2 lg:grid-cols-3">
-          {rest.map((post) => (
-            <article key={post.slug} className="bg-background p-7">
-              <p className="eyebrow">{post.category}</p>
-              <h2 className="mt-3 text-lg font-bold">
-                <Link to="/blog/$slug" params={{ slug: post.slug }} className="hover:text-brand">
-                  {post.title}
-                </Link>
-              </h2>
-              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{post.excerpt}</p>
-              <p className="mt-5 text-xs uppercase tracking-widest text-muted-foreground">
-                {formatDate(post.date)} · {post.readingTime}
-              </p>
-            </article>
-          ))}
-        </div>
       </Section>
     </>
   );
