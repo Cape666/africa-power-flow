@@ -17,6 +17,9 @@ describe("blog publishing", () => {
     for (const post of archivedPosts) {
       if (post.slug !== "choosing-the-right-industrial-electric-motor") {
         expect(getPost(post.slug)).toBeUndefined();
+      } else {
+        expect(getPost(post.slug)).not.toBe(post);
+        expect(getPost(post.slug)?.published).toBe(true);
       }
       expect(post.body?.length).toBeGreaterThan(0);
     }
