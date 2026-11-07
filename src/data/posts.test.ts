@@ -22,7 +22,9 @@ for (const post of archivedPosts) {
 assert.ok(
   archivedPosts
     .find((post) => post.slug === "choosing-the-right-industrial-electric-motor")
-    ?.body?.includes("Replacing an industrial electric motor is rarely as simple as matching the kilowatt rating."),
+    ?.body?.some((paragraph) =>
+      paragraph.startsWith("Replacing an industrial electric motor is rarely as simple as matching the kilowatt rating."),
+    ),
 );
 
 const post = getPost("choosing-the-right-industrial-electric-motor");
