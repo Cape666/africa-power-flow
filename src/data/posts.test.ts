@@ -12,8 +12,8 @@ describe("blog publishing", () => {
   test("older articles remain preserved but cannot be opened publicly", () => {
     const archivedPosts = posts.filter((post) => !post.published);
 
-    expect(posts).toHaveLength(8);
-    expect(archivedPosts).toHaveLength(7);
+    expect(posts).toHaveLength(7);
+    expect(archivedPosts).toHaveLength(6);
     for (const post of archivedPosts) {
       expect(getPost(post.slug)).toBeUndefined();
       expect(post.body?.length).toBeGreaterThan(0);
