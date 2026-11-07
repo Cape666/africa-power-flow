@@ -12,12 +12,16 @@ describe("blog publishing", () => {
   test("older articles remain preserved but cannot be opened publicly", () => {
     const archivedPosts = posts.filter((post) => !post.published);
 
-    expect(posts).toHaveLength(7);
-    expect(archivedPosts).toHaveLength(6);
+    expect(posts).toHaveLength(8);
+    expect(archivedPosts).toHaveLength(7);
     for (const post of archivedPosts) {
-      expect(getPost(post.slug)).toBeUndefined();
+      if (post.slug !== "choosing-the-right-industrial-electric-motor") {
+        expect(getPost(post.slug)).toBeUndefined();
+      }
       expect(post.body?.length).toBeGreaterThan(0);
     }
+    expect(archivedPosts.find((post) => post.slug === "choosing-the-right-industrial-electric-motor")?.body)
+      .toContain("Replacing an industrial electric motor is rarely as simple as matching the kilowatt rating.");
   });
 
   test("the published article retains the requested SEO details", () => {
