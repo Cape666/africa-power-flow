@@ -47,9 +47,9 @@ export const posts: Post[] = [
     ],
     sections: [
       {
-        heading: "Choosing the Right Industrial Electric Motor: 7 Factors to Consider",
+        heading: "Choosing the Right Industrial Electric Motor",
         paragraphs: [
-          "A careful selection process starts with the application and works through the motor's performance, supply, environment and installation requirements.",
+          "Use these seven checks to compare motor options against the application's actual requirements before requesting a quotation.",
         ],
       },
       {
@@ -257,6 +257,22 @@ export const posts: Post[] = [
         ],
       },
     ],
+  },
+  {
+    slug: "choosing-the-right-industrial-electric-motor",
+    title: "Choosing the Right Industrial Electric Motor",
+    category: "Electrical Engineering",
+    date: "2026-08-12",
+    readingTime: "5 min read",
+    excerpt:
+      "Rating, duty cycle, mounting and enclosure decide whether a replacement motor lasts a decade or fails in a season.",
+    body: [
+      "Replacing an industrial electric motor is rarely as simple as matching the kilowatt rating. Duty cycle, ambient temperature, mounting arrangement, frame size, insulation class and enclosure protection all influence whether the new machine will survive its application.",
+      "Start with the nameplate. Power, voltage, frequency, speed, frame and IP rating give you the baseline specification. Photograph the plate before removing the machine — it is the single most useful piece of information when sourcing a replacement.",
+      "Then look at the application. A motor driving a centrifugal pump behaves very differently from one driving a crusher or conveyor with high starting torque. Starting method, expected number of starts per hour, and load inertia should be confirmed before ordering.",
+      "Finally, consider environment. Dust, washdown, corrosive atmospheres and high ambient temperatures all demand a higher protection rating or specific construction. Specifying these correctly up front costs far less than a premature failure.",
+    ],
+    published: false,
   },
   {
     slug: "common-causes-of-industrial-pump-failure",

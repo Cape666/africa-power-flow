@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { PageHero, Section } from "@/components/site/Bits";
 import motorImage from "@/assets/electrical.jpg";
-import { categories, formatDate, publishedPosts } from "@/data/posts";
+import { formatDate, publishedPosts } from "@/data/posts";
 
 const title = "Engineering Insights Blog — Motors, Pumps, Maintenance & Sourcing";
 const description =
