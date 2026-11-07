@@ -47,6 +47,12 @@ export const posts: Post[] = [
     ],
     sections: [
       {
+        heading: "Choosing the Right Industrial Electric Motor",
+        paragraphs: [
+          "Use these seven checks to compare motor options against the application's actual requirements before requesting a quotation.",
+        ],
+      },
+      {
         heading: "1. Understand the Application",
         paragraphs: [
           "Start by identifying what the motor needs to drive. Different applications place different demands on a motor.",

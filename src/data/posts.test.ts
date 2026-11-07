@@ -33,5 +33,9 @@ describe("blog publishing", () => {
       "electric motor specifications",
       "industrial electric motor suppliers",
     ]);
+    expect(post?.title.toLowerCase()).toContain("industrial electric motor");
+    expect(post?.sections?.some((section) =>
+      section.heading.toLowerCase().includes("choosing the right industrial electric motor"),
+    )).toBe(true);
   });
 });
