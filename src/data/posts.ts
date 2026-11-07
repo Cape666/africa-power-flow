@@ -47,12 +47,6 @@ export const posts: Post[] = [
     ],
     sections: [
       {
-        heading: "Choosing the Right Industrial Electric Motor: 7 Factors to Consider",
-        paragraphs: [
-          "A careful selection process starts with the application and works through the motor's performance, supply, environment and installation requirements.",
-        ],
-      },
-      {
         heading: "1. Understand the Application",
         paragraphs: [
           "Start by identifying what the motor needs to drive. Different applications place different demands on a motor.",
