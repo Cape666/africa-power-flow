@@ -1,48 +1,47 @@
-import { describe, expect, test } from "vitest";
+import assert from "node:assert/strict";
 import { categories, getPost, posts, publishedPosts } from "./posts";
 
-describe("blog publishing", () => {
-  test("only the requested motor article is publicly listed", () => {
-    expect(publishedPosts.map((post) => post.slug)).toEqual([
-      "choosing-the-right-industrial-electric-motor",
-    ]);
-    expect(categories).toEqual(["Electrical Engineering"]);
-  });
+assert.deepEqual(
+  publishedPosts.map((post) => post.slug),
+  ["choosing-the-right-industrial-electric-motor"],
+);
+assert.deepEqual(categories, ["Electrical Engineering"]);
 
-  test("older articles remain preserved but cannot be opened publicly", () => {
-    const archivedPosts = posts.filter((post) => !post.published);
+const archivedPosts = posts.filter((post) => !post.published);
+assert.equal(posts.length, 8);
+assert.equal(archivedPosts.length, 7);
+for (const post of archivedPosts) {
+  if (post.slug !== "choosing-the-right-industrial-electric-motor") {
+    assert.equal(getPost(post.slug), undefined);
+  } else {
+    assert.notEqual(getPost(post.slug), post);
+    assert.equal(getPost(post.slug)?.published, true);
+  }
+  assert.ok(post.body && post.body.length > 0);
+}
+assert.ok(
+  archivedPosts
+    .find((post) => post.slug === "choosing-the-right-industrial-electric-motor")
+    ?.body?.includes("Replacing an industrial electric motor is rarely as simple as matching the kilowatt rating."),
+);
 
-    expect(posts).toHaveLength(8);
-    expect(archivedPosts).toHaveLength(7);
-    for (const post of archivedPosts) {
-      if (post.slug !== "choosing-the-right-industrial-electric-motor") {
-        expect(getPost(post.slug)).toBeUndefined();
-      } else {
-        expect(getPost(post.slug)).not.toBe(post);
-        expect(getPost(post.slug)?.published).toBe(true);
-      }
-      expect(post.body?.length).toBeGreaterThan(0);
-    }
-    expect(archivedPosts.find((post) => post.slug === "choosing-the-right-industrial-electric-motor")?.body)
-      .toContain("Replacing an industrial electric motor is rarely as simple as matching the kilowatt rating.");
-  });
+const post = getPost("choosing-the-right-industrial-electric-motor");
+assert.equal(post?.seoTitle, "How to Choose the Right Industrial Electric Motor");
+assert.equal(
+  post?.excerpt,
+  "Learn how to choose the right industrial electric motor by comparing power, speed, torque, efficiency and operating conditions.",
+);
+assert.deepEqual(post?.keywords, [
+  "choosing the right industrial electric motor",
+  "industrial motor selection",
+  "electric motor specifications",
+  "industrial electric motor suppliers",
+]);
+assert.ok(post?.title.toLowerCase().includes("industrial electric motor"));
+assert.ok(
+  post?.sections?.some((section) =>
+    section.heading.toLowerCase().includes("choosing the right industrial electric motor"),
+  ),
+);
 
-  test("the published article retains the requested SEO details", () => {
-    const post = getPost("choosing-the-right-industrial-electric-motor");
-
-    expect(post?.seoTitle).toBe("How to Choose the Right Industrial Electric Motor");
-    expect(post?.excerpt).toBe(
-      "Learn how to choose the right industrial electric motor by comparing power, speed, torque, efficiency and operating conditions.",
-    );
-    expect(post?.keywords).toEqual([
-      "choosing the right industrial electric motor",
-      "industrial motor selection",
-      "electric motor specifications",
-      "industrial electric motor suppliers",
-    ]);
-    expect(post?.title.toLowerCase()).toContain("industrial electric motor");
-    expect(post?.sections?.some((section) =>
-      section.heading.toLowerCase().includes("choosing the right industrial electric motor"),
-    )).toBe(true);
-  });
-});
+console.log("Blog article publishing checks passed.");
