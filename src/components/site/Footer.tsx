@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+import logo from "@/assets/Logo 3-01-01.svg";
 
 export function Footer() {
   return (
@@ -6,12 +7,7 @@ export function Footer() {
       <div className="container-page grid gap-10 py-14 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2.5">
-            <span className="flex h-8 w-8 items-center justify-center bg-accent font-display text-sm font-bold text-accent-foreground">
-              NB
-            </span>
-            <span className="font-display text-base font-bold text-primary-foreground">
-              Kilimanjaro Engineering
-            </span>
+            <img src={logo} alt="Kilimanjaro Engineering" className="h-10 w-auto" />
           </div>
           <p className="mt-4 max-w-sm text-sm leading-relaxed">
             Electrical, mechanical and industrial equipment sourcing and technical sales for

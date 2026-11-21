@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/Logo 3-01-01.svg";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -19,12 +20,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-primary text-primary-foreground">
       <div className="container-page flex h-16 items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-2.5" onClick={() => setOpen(false)}>
-          <span className="flex h-8 w-8 items-center justify-center bg-accent font-display text-sm font-bold text-accent-foreground">
-            NB
-          </span>
-          <span className="font-display text-base font-bold tracking-tight text-primary-foreground">
-            Kilimanjaro Engineering
-          </span>
+          <img src={logo} alt="Kilimanjaro Engineering" className="h-12 w-auto" />
         </Link>
 
         <nav className="hidden items-center gap-6 lg:flex">
