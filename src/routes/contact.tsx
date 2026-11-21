@@ -38,6 +38,50 @@ const enquiryTypes = [
   "Other",
 ];
 
+const contactMethods = [
+  {
+    icon: Mail,
+    heading: "Email enquiries",
+    content: (
+      <p className="mt-1 text-sm text-muted-foreground">
+        <a
+          href="mailto:info@kilimanjaroengineering.com"
+          className="underline-offset-4 hover:text-primary hover:underline"
+        >
+          info@kilimanjaroengineering.com
+        </a>
+      </p>
+    ),
+  },
+  {
+    icon: MessageCircle,
+    heading: "Phone / WhatsApp",
+    content: (
+      <p className="mt-1 text-sm text-muted-foreground">
+        <a href="tel:+27690000000" className="underline-offset-4 hover:text-primary hover:underline">
+          +27690000000
+        </a>
+        {" · "}
+        <a
+          href="https://wa.me/27690000000"
+          className="underline-offset-4 hover:text-primary hover:underline"
+        >
+          WhatsApp
+        </a>
+      </p>
+    ),
+  },
+  {
+    icon: Globe,
+    heading: "Across Africa",
+    content: (
+      <p className="mt-1 text-sm text-muted-foreground">
+        We work with customers and suppliers throughout the continent.
+      </p>
+    ),
+  },
+];
+
 function Contact() {
   const [sent, setSent] = useState(false);
   const [submitting, setSubmitting] = useState(false);
@@ -61,30 +105,15 @@ function Contact() {
               from you.
             </p>
             <ul className="mt-8 grid gap-px bg-border">
-              {[
-                [Mail, "Email enquiries", "Send specifications, drawings and part numbers."],
-                [
-                  MessageCircle,
-                  "Phone / WhatsApp",
-                  "Share the number you prefer and we will call.",
-                ],
-                [
-                  Globe,
-                  "Across Africa",
-                  "We work with customers and suppliers throughout the continent.",
-                ],
-              ].map(([Icon, heading, text]) => {
-                const IconComp = Icon as typeof Mail;
-                return (
-                  <li key={heading as string} className="flex gap-4 bg-surface p-5">
-                    <IconComp className="mt-0.5 h-5 w-5 shrink-0 text-brand" strokeWidth={1.75} />
-                    <div>
-                      <h3 className="text-sm font-bold text-primary">{heading as string}</h3>
-                      <p className="mt-1 text-sm text-muted-foreground">{text as string}</p>
-                    </div>
-                  </li>
-                );
-              })}
+              {contactMethods.map(({ icon: Icon, heading, content }) => (
+                <li key={heading} className="flex gap-4 bg-surface p-5">
+                  <Icon className="mt-0.5 h-5 w-5 shrink-0 text-brand" strokeWidth={1.75} />
+                  <div>
+                    <h3 className="text-sm font-bold text-primary">{heading}</h3>
+                    {content}
+                  </div>
+                </li>
+              ))}
             </ul>
           </div>
 
